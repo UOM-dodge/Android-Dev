@@ -2,7 +2,15 @@
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android" name="Android">
-      <configuration />
+      <configuration>
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../../Android-Dev/gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../../Android-Dev/gen" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../../Android-Dev/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/../../Android-Dev/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../../Android-Dev/assets" />
+        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/../../Android-Dev/libs" />
+        <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/../../Android-Dev/proguard_logs" />
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
