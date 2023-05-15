@@ -21,10 +21,6 @@ public class MainActivity extends AppCompatActivity
     Button timeButton;
     int hour, minute;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
