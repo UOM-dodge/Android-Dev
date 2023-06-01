@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">CureMeApp</string>
+    <string name="app_title">App</string>
+    <string name="cureme_title">CureMe</string>
+
+    <!--prompt text-->
+    <string name="service_creation_text">Δημιουργία νέας παροχής</string>
+    <string name="user_text_promt">Συμπληρώστε τα στοιχεία της παροχής</string>
+
+    <!--input text-->
+    <string name="code_input_hint">Κωδικός</string>
+    <string name="name_input_hint">Όνομα</string>
+    <string name="description_input_hint">Περιγραφή</string>
+    <string name="cost_input_hint">Κόστος ανά συνεδρία</string>
+
+    <!--button text-->
+    <string name="button_text">Προσθήκη παροχής</string>
+
+    <!--custom dialog text-->
+    <string name="confirm_button_text">Επιβεβαίωση</string>
+    <string name="exit_button_text">Έξοδος</string>
+    <string name="new_service">Θέλετε να προσθέσετε νέα παροχή;</string>
+    <string name="confirm_button">confirm_button</string>
+    <string name="cancel_button">cancel_button</string>
 </resources>
