@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CureMeApp</string>
+    <string name="cure_me_title">CureMe</string>
+    <string name="app_title">App</string>
+    <string name="new_requests">Νέα Αιτήματα</string>
+    <string name="description">Αίτημα για ραντεβού στις:</string>
 </resources>
