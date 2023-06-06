@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="backgroundColor">#DFDDDD</color>
     <color name="seed">#67C1AC</color>
     <color name="md_theme_light_primary">#006B5A</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
@@ -61,4 +62,5 @@
     <color name="md_theme_dark_surfaceTint">#5ADBC0</color>
     <color name="md_theme_dark_outlineVariant">#3F4946</color>
     <color name="md_theme_dark_scrim">#000000</color>
+    <color name="black">#FF000000</color>
 </resources>

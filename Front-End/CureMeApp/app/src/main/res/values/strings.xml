@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CureMeApp</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="name">Name</string>
+    <string name="buttoninfo">λεπτομέρειες</string>
+    <string name="next_appointment">NEXT APPOINTMENT:</string>
+    <string name="patient_not_found">Ο ΑΣΘΕΝΗΣ ΔΕ ΒΡΕΘΗΚΕ</string>
 </resources>
