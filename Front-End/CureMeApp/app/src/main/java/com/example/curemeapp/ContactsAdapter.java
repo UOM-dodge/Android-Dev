@@ -12,18 +12,21 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyHolder> {
-    ArrayList<ModelClass> arrayList;
+    List<Patient> patientsList;
+    ArrayList<Patient> arrayList;
     private RecyclerViewInterface itemClickListener;
 
 
-    public void setFilteredList(ArrayList<ModelClass> filteredList) {
+    public void setFilteredList(ArrayList<Patient> filteredList) {
         this.arrayList = filteredList;
         notifyDataSetChanged();
     }
-    public ContactsAdapter(ArrayList<ModelClass> arrayList){
+    public ContactsAdapter(ArrayList<Patient> arrayList,List<Patient> patientsList){
+        this.patientsList = patientsList;
         this.arrayList = arrayList;
 
     }
@@ -38,18 +41,22 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyHolder holder,final int position) {
-        ModelClass test = arrayList.get(position);
-        holder.getName().setText(test.getName());
-        holder.getInfoTextView().setText(test.getAMKA());
-        holder.getNumberTextView().setText(test.getPhone());
-        holder.getImg().setImageResource(test.getImg());
+    public void onBindViewHolder(@NonNull MyHolder holder,int position) {
+       // Patient test = arrayList.get(position);
+//        holder.getName().setText(test.getName());
+//        holder.getInfoTextView().setText(test.getAMKA());
+//        holder.getNumberTextView().setText(test.getPhone());
+//        holder.getImg().setImageResource(test.getImg());
+        holder.getName().setText(patientsList.get(position).getName());
+        holder.getNumberTextView().setText(patientsList.get(position).getPhoneNumber());
+        holder.getInfoTextView().setText(patientsList.get(position).getAMKA());
+        holder.getImg().setImageResource(patientsList.get(position).getImage());
 
     }
 
     @Override
     public int getItemCount() {
-        return arrayList.size();
+        return patientsList.size();
     }
 
 

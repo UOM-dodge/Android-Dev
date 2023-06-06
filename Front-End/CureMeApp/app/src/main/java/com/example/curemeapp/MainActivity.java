@@ -15,16 +15,19 @@ import android.widget.TextView;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
 
+    private final String myIP = "192.168.1.68";
+    List<Patient> patientList;
     SearchView searchView;
     RecyclerView recyclerView;
     TextView notFoundTextView;
 
     RelativeLayout notFoundLayout;
     ImageView notFoundImageView;
-    ArrayList<ModelClass> arrayList = new ArrayList<ModelClass>();
+    ArrayList<Patient> arrayList = new ArrayList<Patient>();
 
     String[] contactList = new String[]{"Mary Ting", "George Papas", "Athina Pratsoulaki"};
 
@@ -47,20 +50,28 @@ public class MainActivity extends AppCompatActivity  {
         searchView.clearFocus();
 
 
-        for (int i = 0; i < contactList.length; i++) {
-            ModelClass modelClass = new ModelClass();
-            modelClass.setPhone(phoneList[i]);
-            modelClass.setName(contactList[i]);
-            modelClass.setImg(imgList[i]);
-            modelClass.setAMKA(AMKAList[i]);
-            arrayList.add(modelClass);
+        String url = "http://"+myIP+"/cure_db/requestPatientData.php";
+
+        try {
+            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            this.patientList = okHttpHandler.requestPatientData(url);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+//        for (int i = 0; i < contactList.length; i++) {
+//            ModelClass modelClass = new ModelClass();
+//            modelClass.setPhone(phoneList[i]);
+//            modelClass.setName(contactList[i]);
+//            modelClass.setImg(imgList[i]);
+//            modelClass.setAMKA(AMKAList[i]);
+//            arrayList.add(modelClass);
+//        }
 
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
 
-        ContactsAdapter contactsAdapter = new ContactsAdapter(arrayList);
+        ContactsAdapter contactsAdapter = new ContactsAdapter(arrayList,patientList);
         recyclerView.setAdapter(contactsAdapter);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {@Override
@@ -70,9 +81,9 @@ public class MainActivity extends AppCompatActivity  {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                ArrayList<ModelClass> filteredList = new ArrayList<>();
+                ArrayList<Patient> filteredList = new ArrayList<>();
 
-                for (ModelClass item : arrayList) {
+                for (Patient item : arrayList) {
                     if (item.getName().toLowerCase().contains(newText.toLowerCase())) {
                         filteredList.add(item);
                     }
