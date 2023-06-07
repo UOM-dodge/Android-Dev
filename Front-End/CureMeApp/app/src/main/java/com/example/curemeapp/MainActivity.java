@@ -15,33 +15,28 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     List<Item> itemList;
 
+    private final String myIP = "192.168.1.100";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        createEvents(savedInstanceState);
+
+
+
+    }
+
+    private void createEvents(Bundle bundle){
+        RequestObject request = new RequestObject();
+        List<Item> items;
+        items = request.requestItems();
 
         recyclerView=(RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        itemList=new ArrayList<>();
-
-        itemList.add(
-                new Item("Μαρία","Αίτημα για ραντεβού στις:",R.drawable.maria)
-        );
-        itemList.add(
-                new Item("Κώστας","Αίτημα για ραντεβού στις:",R.drawable.kostas)
-        );
-        itemList.add(
-                new Item("Βαγγέλης","Αίτημα για ραντεβού στις:",R.drawable.vaggelis)
-        );
-
-        ItemAdapter adapter=new ItemAdapter(this,itemList);
+        ItemAdapter adapter = new ItemAdapter(this,items);
         recyclerView.setAdapter(adapter);
-
-
-
-
     }
 }
