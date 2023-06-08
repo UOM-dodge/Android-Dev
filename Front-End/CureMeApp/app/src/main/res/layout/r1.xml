@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".R1Activity">
 
     <LinearLayout
         android:id="@+id/title_container"
@@ -71,50 +71,95 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
                     android:paddingBottom="5dp"
-                    android:text="@string/service_creation_text"
+                    android:text="@string/clinic_creation_text"
                     android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_prompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:paddingBottom="15dp"
+                    android:text="@string/r1_text_promt"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/input_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/name_input_hint"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/description_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/r1_address_input_hint"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/code_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/r1_afm_input_hint"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/button_container"
                 android:layout_width="match_parent"
-                android:layout_height="407dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <Button
                     android:id="@+id/r1Btn"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
 
                     android:background="@drawable/round_button"
                     android:fontFamily="@font/poppins_bold"
-                    android:padding="10dp"
-                    android:text="@string/button1_text"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/r1btn_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <Button
-                    android:id="@+id/r2Btn"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/round_button"
-                    android:fontFamily="@font/poppins_bold"
-                    android:padding="10dp"
-                    android:text="@string/button2_text"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/r1Btn"
                     app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 

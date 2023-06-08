@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".R1Activity"
+            android:exported="false">
+        </activity>
     </application>
 
 </manifest>
