@@ -19,7 +19,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
 
-    private final String myIP = "192.168.1.68";
+    private final String myIP = "192.168.1.3";
+            //"192.168.1.68";
     List<Patient> patientList;
     SearchView searchView;
     RecyclerView recyclerView;
@@ -29,17 +30,17 @@ public class MainActivity extends AppCompatActivity  {
     ImageView notFoundImageView;
     ArrayList<Patient> arrayList = new ArrayList<Patient>();
 
-    String[] contactList = new String[]{"Mary Ting", "George Papas", "Athina Pratsoulaki"};
-
-    int[] imgList = new int[]{R.drawable.cont2, R.drawable.images, R.drawable.contact3};
-
-    String[]AMKAList = new String[]{"04060912836","09018374217","2507826102938"};
-    String[]phoneList = new String[]{"6987345672","6978823965","6904350867"};
+//    String[] contactList = new String[]{"Mary Ting", "George Papas", "Athina Pratsoulaki"};
+//
+//    int[] imgList = new int[]{R.drawable.cont2, R.drawable.images, R.drawable.contact3};
+//
+//    String[]AMKAList = new String[]{"04060912836","09018374217","2507826102938"};
+//    String[]phoneList = new String[]{"6987345672","6978823965","6904350867"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ImageView imageView = findViewById(R.id.imageView);
         setContentView(R.layout.activity_main);
+        ImageView imageView = findViewById(R.id.imageView);
         notFoundLayout = findViewById(R.id.notFoundLayout);
         searchView = findViewById(R.id.searchView);
         notFoundTextView = findViewById(R.id.notFoundTextView);
