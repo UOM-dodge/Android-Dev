@@ -68,12 +68,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:backgroundTint="@color/basicgreen"
-        android:text="@string/button"
+        android:text="Αναζήτηση"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -90,45 +90,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
-    <Button
-        android:id="@+id/buttonTime"
-        android:layout_width="165dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:width="300dp"
-        android:height="300dp"
-        android:backgroundTint="@color/darkGray"
-        android:onClick="popTimePicker"
-        android:text="@string/buttonTime"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonTime"-->
+<!--        android:layout_width="165dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:width="300dp"-->
+<!--        android:height="300dp"-->
+<!--        android:backgroundTint="@color/darkGray"-->
+<!--        android:onClick="popTimePicker"-->
+<!--        android:text="@string/buttonTime"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/calendarView" />-->
 
-    <Spinner
-        android:id="@+id/spinner_actions"
-        android:layout_width="159dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner_actions"-->
+<!--        android:layout_width="159dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:spinnerMode="dropdown"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/calendarView" />-->
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="322dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        android:background="@color/beige"
-        android:backgroundTint="@color/beige"
-        android:hint="Επιπλέον σχόλια..."
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonTime"
-        app:layout_constraintVertical_bias="0.625" />
+<!--    <com.google.android.material.textfield.TextInputEditText-->
+<!--        android:id="@+id/textInputEditText"-->
+<!--        android:layout_width="322dp"-->
+<!--        android:layout_height="96dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginBottom="12dp"-->
+<!--        android:background="@color/beige"-->
+<!--        android:backgroundTint="@color/beige"-->
+<!--        android:hint="Επιπλέον σχόλια..."-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/button"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.53"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/buttonTime"-->
+<!--        app:layout_constraintVertical_bias="0.625" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
