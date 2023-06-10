@@ -3,7 +3,7 @@ package com.example.curemeapp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Item {
+public class ItemR7 {
     private int image;
     private int requestID;
 //    private String description;
@@ -13,7 +13,7 @@ public class Item {
     private LocalDateTime localDateTime;
     private String status;
 
-    public Item(int requestID, String fullName, LocalDateTime localDateTime, String status, int image) {
+    public ItemR7(int requestID, String fullName, LocalDateTime localDateTime, String status, int image) {
         this.requestID = requestID;
         this.fullName = fullName;
         this.image = image;

@@ -5,17 +5,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RequestObject {
+public class RequestObjectR7 {
     String range_start;
-    private List<Item> items = new ArrayList<>();
+    private List<ItemR7> items = new ArrayList<>();
 
     private final String myIP = "192.168.1.100";
 
-    public RequestObject() {
+    public RequestObjectR7() {
 
     }
 
-    public List<Item> requestItems() {
+    public List<ItemR7> requestItems() {
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         range_start = localDateTime.format(f);
@@ -24,7 +24,7 @@ public class RequestObject {
         String url = "http://"+myIP+"/cure_db/requestItems.php?range_start="+range_start;
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandlerR7 okHttpHandler = new OkHttpHandlerR7();
             this.items = okHttpHandler.requestItems(url);
         } catch (Exception e) {
             e.printStackTrace();
@@ -37,7 +37,7 @@ public class RequestObject {
         String url = "http://"+myIP+"/cure_db/requestConfirmed.php?requestID="+requestID;
         String response = null;
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandlerR7 okHttpHandler = new OkHttpHandlerR7();
             response = okHttpHandler.requestConfirmed(url);
         } catch (Exception e) {
             e.printStackTrace();
@@ -50,7 +50,7 @@ public class RequestObject {
         String url = "http://"+myIP+"/cure_db/requestCanceled.php?requestID="+requestID;
         String response = null;
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandlerR7 okHttpHandler = new OkHttpHandlerR7();
             response = okHttpHandler.requestConfirmed(url);
         } catch (Exception e) {
             e.printStackTrace();

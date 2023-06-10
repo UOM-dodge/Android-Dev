@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.security.spec.ECField;
 import java.util.List;
 import android.widget.Toast;
 import android.widget.Button;
@@ -19,11 +18,11 @@ import android.widget.Button;
 
 
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder> {
+public class ItemAdapterR7 extends RecyclerView.Adapter<ItemAdapterR7.ItemViewHolder> {
     private final Context mCtx;
-    private final List<Item> itemList;
+    private final List<ItemR7> itemList;
 
-    public ItemAdapter(Context mCtx, List<Item> itemList) {
+    public ItemAdapterR7(Context mCtx, List<ItemR7> itemList) {
         this.mCtx = mCtx;
         this.itemList = itemList;
     }
@@ -32,7 +31,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater= LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.activity_card2,parent,false);
+        View view = inflater.inflate(R.layout.activity_card2_r7,parent,false);
         return new ItemViewHolder(view);
     }
 
@@ -53,7 +52,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
                 try {
                     int requestID = itemList.get(position).getRequestID();
-                    RequestObject request = new RequestObject();
+                    RequestObjectR7 request = new RequestObjectR7();
                     String response = request.requestConfirmed(requestID);
                     System.out.println(response);
                     //TODO make MainActivity refresh on btnClick (maybe Interface class)
@@ -71,7 +70,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             public void onClick(View v) {
                 try {
                     int requestID = itemList.get(position).getRequestID();
-                    RequestObject request = new RequestObject();
+                    RequestObjectR7 request = new RequestObjectR7();
                     String response = request.requestCanceled(requestID);
                     System.out.println(response);
                     //TODO make MainActivity refresh on btnClick (maybe Interface class)

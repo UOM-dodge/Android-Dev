@@ -17,18 +17,18 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class OkHttpHandler {
+public class OkHttpHandlerR7 {
 
     final int image = R.drawable.baseline_person_24;
 
-    public OkHttpHandler() {
+    public OkHttpHandlerR7() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
     }
 
 
-    List<Item> requestItems(String url) throws Exception {
-        ArrayList<Item> items = new ArrayList<>();
+    List<ItemR7> requestItems(String url) throws Exception {
+        ArrayList<ItemR7> items = new ArrayList<>();
         OkHttpClient client = new OkHttpClient().newBuilder().build();
         RequestBody body = RequestBody.create(" ", MediaType.parse("text/plain"));
         Request request = new Request.Builder().url(url).method("POST", body).build();
@@ -46,7 +46,7 @@ public class OkHttpHandler {
                 String fullName = json.getString("patient_amka");
                 LocalDateTime date_time = LocalDateTime.parse(json.getString("date_time"), f);
                 String status = json.getString("status");
-                items.add(new Item(request_id, fullName, date_time, status, image));
+                items.add(new ItemR7(request_id, fullName, date_time, status, image));
             }
         } catch (JSONException e) {
             e.printStackTrace();
