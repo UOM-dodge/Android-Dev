@@ -5,7 +5,7 @@
 
     <!--prompt text-->
     <string name="service_creation_text">Δημιουργία νέας παροχής</string>
-    <string name="user_text_promt">Συμπληρώστε τα στοιχεία της παροχής</string>
+    <string name="user_text_prompt">Συμπληρώστε τα στοιχεία της παροχής</string>
 
     <!--input text-->
     <string name="code_input_hint">Κωδικός</string>
