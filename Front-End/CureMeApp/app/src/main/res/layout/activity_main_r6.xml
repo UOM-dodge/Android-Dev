@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeekViewActivity">
+    tools:context=".MainActivityR6">
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,6 +37,20 @@
         app:layout_constraintVertical_bias="0.036" />
 
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Εβοδομαδιαίο Ημερολόγιο"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:background="@color/md_theme_light_primary"
+        android:onClick="weeklyAction"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -61,9 +76,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:onClick="previousWeekAction"
+                android:onClick="previousMonthAction"
                 android:text="@string/Back"
-                android:textColor="@color/black"
+                android:textColor="@color/seed"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -76,16 +91,17 @@
                 android:text="@string/_2023"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:onClick="nextWeekAction"
+                android:onClick="nextMonthAction"
                 android:text="@string/Next"
-                android:textColor="@color/black"
+                android:textColor="@color/seed"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -167,24 +183,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/calendarRecyclerView"
             android:layout_width="413dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@color/seed" />
-
-        <ListView
-            android:layout_width="418dp"
-            android:layout_height="243dp"
-            android:layout_weight="5"
-            android:background="@color/md_theme_light_onPrimary"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.996" />
+            android:layout_height="310dp"
+            android:background="@color/seed"
+            />
 
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
