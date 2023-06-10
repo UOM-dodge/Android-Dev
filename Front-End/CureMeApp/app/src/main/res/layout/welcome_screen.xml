@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:text="@string/app_title"
             android:textAlignment="textStart"
-            android:textColor="@color/app_title"
+            android:textColor="@color/md_theme_light_error"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -69,10 +69,9 @@
                     android:id="@+id/service_creation_prompt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins"
                     android:paddingBottom="5dp"
-                    android:text="@string/service_creation_text"
-                    android:textColor="@color/black"
+                    android:text="Log in"
+                    android:textColor="@color/md_theme_dark_scrim"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
@@ -92,7 +91,7 @@
 
                     android:background="@drawable/round_button"
                     android:padding="10dp"
-                    android:text="@string/button1_text"
+                    android:text="Σύνδεση"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +107,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/round_button"
                     android:padding="10dp"
-                    android:text="@string/button2_text"
+                    android:text="Εγγραφή"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
