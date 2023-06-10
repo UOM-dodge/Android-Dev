@@ -42,9 +42,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Εβοδομαδιαίο Ημερολόγιο"
-        android:textColor="@color/black"
-        android:background="@color/seed"
-        android:textStyle="bold"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:background="@color/md_theme_light_primary"
         android:onClick="weeklyAction"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +91,8 @@
                 android:text="@string/_2023"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:layout_width="0dp"
@@ -101,7 +101,7 @@
                 android:background="@null"
                 android:onClick="nextMonthAction"
                 android:text="@string/Next"
-                android:textColor="@color/black"
+                android:textColor="@color/seed"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -184,7 +184,8 @@
             android:id="@+id/calendarRecyclerView"
             android:layout_width="413dp"
             android:layout_height="310dp"
-            android:background="@color/seed" />
+            android:background="@color/seed"
+            />
 
     </LinearLayout>
 
