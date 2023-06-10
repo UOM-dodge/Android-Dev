@@ -47,6 +47,9 @@
         <activity android:name=".MainActivityR3"
             android:exported="false"/>
 
+        <activity android:name=".MainActivityR5"
+            android:exported="false"/>
+
     </application>
 
 </manifest>
