@@ -25,14 +25,14 @@ public class MainActivityR1 extends AppCompatActivity {
             }
         });
 
-//        Button r2Btn = findViewById(R.id.r2Btn);
-//        r2Btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, R2Activity.class);
-//                startActivity(intent);
-//            }
-//        });
+        Button r2Btn = findViewById(R.id.r2Btn);
+        r2Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivityR2.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
