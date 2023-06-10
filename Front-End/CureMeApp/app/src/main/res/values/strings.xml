@@ -55,4 +55,7 @@
     <string name="app">App</string>
     <string name="cal">Ημερολόγιο</string>
     <string name="_2023">June 2023</string>
+    <string name="cure_me_title">CureMe</string>
+    <string name="new_requests">Νέα Αιτήματα</string>
+    <string name="description">Αίτημα για ραντεβού στις:</string>
 </resources>

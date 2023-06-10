@@ -66,4 +66,7 @@
     <color name="black">#FF000000</color>
     <color name="text_background_color">#F2F0F0</color>
     <color name="hint_color">#858484</color>
+    <color name="button_accept_text_color">#67C1AC</color>
+    <color name="button_decline_text_color">#DA2C38</color>
+    <color name="background_box">#F5F7FB</color>
 </resources>
