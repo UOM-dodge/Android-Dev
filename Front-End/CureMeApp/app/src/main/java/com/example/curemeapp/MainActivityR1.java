@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityR1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_r1);
 
 
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         r1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, R1Activity.class);
+                Intent intent = new Intent(MainActivityR1.this, R1Activity.class);
                 startActivity(intent);
             }
         });

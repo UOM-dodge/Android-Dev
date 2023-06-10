@@ -1,11 +1,11 @@
 package com.example.curemeapp;
 
-public class PhysioCenterObject {
+public class PhysioCenterObjectR1 {
     final String myIP = "192.168.1.3";
 
     String AFM, address, physioName;
 
-    public PhysioCenterObject(String AFM, String address, String physioName) {
+    public PhysioCenterObjectR1(String AFM, String address, String physioName) {
         this.AFM = AFM;
         this.address = address;
         this.physioName = physioName;

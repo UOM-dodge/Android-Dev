@@ -8,9 +8,9 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class OkHttpHandler {
+public class OkHttpHandlerR1 {
 
-    public OkHttpHandler() {
+    public OkHttpHandlerR1() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
     }

@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class R1Activity extends MainActivity {
+public class R1Activity extends MainActivityR1 {
 
     final String myIP = "192.168.1.3";
     @Override
@@ -32,12 +32,12 @@ public class R1Activity extends MainActivity {
 
 
                     // TODO AFM check
-                    PhysioCenterObject phCntr = new PhysioCenterObject(AFMView.getText().toString(),
+                    PhysioCenterObjectR1 phCntr = new PhysioCenterObjectR1(AFMView.getText().toString(),
                                                                         physioNameView.getText().toString(),
                                                                         addressView.getText().toString());
 
                     try {
-                        SendObject sendObject = new SendObject();
+                        SendObjectR1 sendObject = new SendObjectR1();
                         String response = sendObject.sendPhysioData(phCntr);
                         System.out.println(response);
                         overridePendingTransition(0, 0);
