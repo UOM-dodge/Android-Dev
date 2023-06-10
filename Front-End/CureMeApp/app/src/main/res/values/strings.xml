@@ -49,4 +49,10 @@
     <string name="buttoninfo">λεπτομέρειες</string>
     <string name="next_appointment">NEXT APPOINTMENT:</string>
     <string name="patient_not_found">Ο ΑΣΘΕΝΗΣ ΔΕ ΒΡΕΘΗΚΕ</string>
+    <string name="Back"><![CDATA[<]]></string>
+    <string name="Next"><![CDATA[>]]></string>
+    <string name="cureme">CureMe</string>
+    <string name="app">App</string>
+    <string name="cal">Ημερολόγιο</string>
+    <string name="_2023">June 2023</string>
 </resources>
