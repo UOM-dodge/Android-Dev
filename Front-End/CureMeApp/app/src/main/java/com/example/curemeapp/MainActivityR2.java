@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityR2 extends AppCompatActivity {
 
     EditText code,name,description,cost;
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_r2);
 
         /*error message id text-fields are empty*/
         code= (EditText) findViewById(R.id.code_input);
@@ -56,17 +56,17 @@ public class MainActivity extends AppCompatActivity {
 
 
                     BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
-                            MainActivity.this, R.style.BottomSheetDialogTheme
+                            MainActivityR2.this, R.style.BottomSheetDialogTheme
                     );
                     View bottomSheetView = LayoutInflater.from(getApplicationContext())
                             .inflate(
-                                    R.layout.layout_bottom_sheet,
+                                    R.layout.layout_bottom_sheet_r2,
                                     (LinearLayout) findViewById(R.id.bottomSheetContainer)
                             );
                     bottomSheetView.findViewById(R.id.button_confirm).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Toast.makeText(MainActivity.this, "Εισαγωγή παροχής επιτυχής", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivityR2.this, "Εισαγωγή παροχής επιτυχής", Toast.LENGTH_SHORT).show();
                             bottomSheetDialog.dismiss();
 
                             EditText code = (EditText) findViewById(R.id.code_input);
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     bottomSheetView.findViewById(R.id.button_exit).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Toast.makeText(MainActivity.this, "Exit", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivityR2.this, "Exit", Toast.LENGTH_SHORT).show();
                             bottomSheetDialog.dismiss();
 
                         }
