@@ -53,6 +53,13 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyHold
         holder.getImg().setImageResource(patientsList.get(position).getImage());
 
     }
+//    public void onBindViewHolder(@NonNull MyHolder holder, int position) {
+//        holder.getName().setText(arrayList.get(position).getName());
+//        holder.getNumberTextView().setText(arrayList.get(position).getPhoneNumber());
+//        holder.getInfoTextView().setText(arrayList.get(position).getAMKA());
+//        holder.getImg().setImageResource(arrayList.get(position).getImage());
+//    }
+
 
     @Override
     public int getItemCount() {
