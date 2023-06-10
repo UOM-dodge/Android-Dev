@@ -2,18 +2,15 @@ package com.example.curemeapp;
 
 import android.os.StrictMode;
 
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class OkHttpHandler {
+public class OkHttpHandlerR3 {
 
-    public OkHttpHandler() {
+    public OkHttpHandlerR3() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
     }

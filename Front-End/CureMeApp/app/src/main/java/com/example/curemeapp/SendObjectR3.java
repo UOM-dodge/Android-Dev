@@ -1,13 +1,11 @@
 package com.example.curemeapp;
 
-import java.util.List;
-
-public class SendObject {
+public class SendObjectR3 {
     final String myIP = "192.168.1.2";
-    Patient patient;
+    PatientR3 patient;
 
 
-    public String sendPatientData(Patient patient){
+    public String sendPatientData(PatientR3 patient){
         String url = "http://"+myIP+"/cure_db/sendPatientData.php?first_name="+patient.getFirstName()+
                         "&last_name="+patient.getLastName()+
                         "&email="+patient.getEmail()+
@@ -17,7 +15,7 @@ public class SendObject {
         String response = null;
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandlerR3 okHttpHandler = new OkHttpHandlerR3();
             response = okHttpHandler.sendPatientData(url);
         }catch (Exception e) {
             e.printStackTrace();

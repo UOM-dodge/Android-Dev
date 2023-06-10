@@ -1,7 +1,6 @@
 package com.example.curemeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +9,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityR3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_r3);
 
 
         Button addButton = findViewById(R.id.addButtonR3);
@@ -45,28 +44,28 @@ public class MainActivity extends AppCompatActivity {
 
                      */
 
-                    Patient patient = new Patient(  fullNameView.getText().toString(),
+                    PatientR3 patient = new PatientR3(  fullNameView.getText().toString(),
                             emailView.getText().toString(),
                             addressView.getText().toString(),
                             amkaView.getText().toString());
 
 
                     try {
-                        SendObject sendObject = new SendObject();
+                        SendObjectR3 sendObject = new SendObjectR3();
                         String response = sendObject.sendPatientData(patient);
                         System.out.println(response);
                         finish();
                         overridePendingTransition(0, 0);
                         startActivity(getIntent());
                         overridePendingTransition(0, 0);
-                        Toast.makeText(MainActivity.this, "Προστέθηκε νέος ασθενής!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivityR3.this, "Προστέθηκε νέος ασθενής!", Toast.LENGTH_SHORT).show();
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Toast.makeText(MainActivity.this, "Σφάλμα στην Βάση Δεδομένων", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivityR3.this, "Σφάλμα στην Βάση Δεδομένων", Toast.LENGTH_SHORT).show();
                     }
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Συμπλήρωστε όλα τα πεδία", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivityR3.this, "Συμπλήρωστε όλα τα πεδία", Toast.LENGTH_SHORT).show();
                 }
 
 
