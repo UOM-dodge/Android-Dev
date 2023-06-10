@@ -26,7 +26,21 @@
     <string name="button1_text">Δημιουργία φυσιοθεραπευτηριου</string>
     <string name="button2_text">Δημιουργία νέας παροχής</string>
 
+
+
+
+
+    <!--prompt text-->
+    <string name="user_text_prompt">Συμπληρώστε τα στοιχεία της παροχής</string>
+
+
+    <!--button text-->
+    <string name="button_text">Προσθήκη παροχής</string>
+
     <!--custom dialog text-->
     <string name="confirm_button_text">Επιβεβαίωση</string>
     <string name="exit_button_text">Έξοδος</string>
+    <string name="new_service">Θέλετε να προσθέσετε νέα παροχή;</string>
+    <string name="confirm_button">confirm_button</string>
+    <string name="cancel_button">cancel_button</string>
 </resources>
