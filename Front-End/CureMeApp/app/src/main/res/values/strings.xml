@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CureMeApp</string>
+    <string name="cureme_title">CureMe</string>
+    <string name="app_title">App</string>
 </resources>
