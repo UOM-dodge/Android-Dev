@@ -43,4 +43,10 @@
     <string name="new_service">Θέλετε να προσθέσετε νέα παροχή;</string>
     <string name="confirm_button">confirm_button</string>
     <string name="cancel_button">cancel_button</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="name">Name</string>
+    <string name="buttoninfo">λεπτομέρειες</string>
+    <string name="next_appointment">NEXT APPOINTMENT:</string>
+    <string name="patient_not_found">Ο ΑΣΘΕΝΗΣ ΔΕ ΒΡΕΘΗΚΕ</string>
 </resources>
