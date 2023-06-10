@@ -6,7 +6,6 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,18 +16,18 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivityR5 extends AppCompatActivity  {
 
     private final String myIP = "192.168.1.3";
             //"192.168.1.68";
-    List<Patient> patientList;
+    List<PatientR5> patientList;
     SearchView searchView;
     RecyclerView recyclerView;
     TextView notFoundTextView;
 
     RelativeLayout notFoundLayout;
     ImageView notFoundImageView;
-    ArrayList<Patient> arrayList = new ArrayList<Patient>();
+    ArrayList<PatientR5> arrayList = new ArrayList<PatientR5>();
 
 //    String[] contactList = new String[]{"Mary Ting", "George Papas", "Athina Pratsoulaki"};
 //
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_r5);
         ImageView imageView = findViewById(R.id.imageView);
         notFoundLayout = findViewById(R.id.notFoundLayout);
         searchView = findViewById(R.id.searchView);
@@ -54,14 +53,14 @@ public class MainActivity extends AppCompatActivity  {
         String url = "http://"+myIP+"/cure_db/requestPatientData.php";
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandlerR5 okHttpHandler = new OkHttpHandlerR5();
              this.patientList = okHttpHandler.requestPatientData(url);
             arrayList.addAll(okHttpHandler.requestPatientData(url));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL,false);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivityR5.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
 
         ContactsAdapter contactsAdapter = new ContactsAdapter(arrayList,patientList);
@@ -75,9 +74,9 @@ public class MainActivity extends AppCompatActivity  {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                ArrayList<Patient> filteredList = new ArrayList<>();
+                ArrayList<PatientR5> filteredList = new ArrayList<>();
 
-                for (Patient item : patientList) {
+                for (PatientR5 item : patientList) {
                     if (item.getName().toLowerCase().contains(newText.toLowerCase())) {
                         filteredList.add(item);
                     }

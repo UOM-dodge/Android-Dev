@@ -1,6 +1,6 @@
 package com.example.curemeapp;
 
-public class Patient {
+public class PatientR5 {
     String name,phoneNumber,AMKA;
     int image;
 
@@ -36,7 +36,7 @@ public class Patient {
         this.image = image;
     }
 
-    public Patient(String name, String phoneNumber, String AMKA, int image) {
+    public PatientR5(String name, String phoneNumber, String AMKA, int image) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.AMKA = AMKA;

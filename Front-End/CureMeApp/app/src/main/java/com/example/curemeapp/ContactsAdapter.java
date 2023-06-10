@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -16,16 +15,16 @@ import java.util.List;
 
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyHolder> {
-    List<Patient> patientsList;
-    ArrayList<Patient> arrayList;
-    private RecyclerViewInterface itemClickListener;
+    List<PatientR5> patientsList;
+    ArrayList<PatientR5> arrayList;
+    private RecyclerViewInterfaceR5 itemClickListener;
 
 
-    public void setFilteredList(ArrayList<Patient> filteredList) {
+    public void setFilteredList(ArrayList<PatientR5> filteredList) {
         this.arrayList = filteredList;
         notifyDataSetChanged();
     }
-    public ContactsAdapter(ArrayList<Patient> arrayList,List<Patient> patientsList){
+    public ContactsAdapter(ArrayList<PatientR5> arrayList, List<PatientR5> patientsList){
         this.patientsList = patientsList;
         this.arrayList = arrayList;
 
@@ -35,7 +34,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyHold
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_card_view,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_card_view_r5,parent,false);
 
         return new MyHolder(view);
     }
