@@ -20,13 +20,13 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyHold
     private RecyclerViewInterfaceR5 itemClickListener;
 
 
-    public void setFilteredList(ArrayList<PatientR5> filteredList) {
-        this.arrayList = filteredList;
+    public void setFilteredList(List<PatientR5> patientsList) {
+        this.patientsList = patientsList;
         notifyDataSetChanged();
     }
-    public ContactsAdapter(ArrayList<PatientR5> arrayList, List<PatientR5> patientsList){
+    public ContactsAdapter(List<PatientR5> patientsList){
         this.patientsList = patientsList;
-        this.arrayList = arrayList;
+
 
     }
 
