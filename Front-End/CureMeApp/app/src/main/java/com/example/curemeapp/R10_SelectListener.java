@@ -4,5 +4,5 @@ import android.os.Bundle;
 
 public interface R10_SelectListener {
 
-    void onItemClicked(Bundle budnle);
+    void onItemClicked(Bundle bundle);
 }

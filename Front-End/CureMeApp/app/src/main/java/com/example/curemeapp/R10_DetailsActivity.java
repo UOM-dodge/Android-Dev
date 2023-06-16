@@ -27,7 +27,7 @@ public class R10_DetailsActivity extends AppCompatActivity {
         physioCenterView = findViewById(R.id.location);
 
 
-        //Bundle
+        //Bundle setText
         dateView.setText(bundle.getString("date"));
         serviceNameView.setText(bundle.getString("service_name"));
         priceView.setText(bundle.getString("price"));

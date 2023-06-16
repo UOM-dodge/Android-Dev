@@ -33,6 +33,7 @@ public class R10_HistoryViewAdapter extends RecyclerView.Adapter<R10_HistoryView
 
     @Override
     public void onBindViewHolder(@NonNull R10_HistoryViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        //setText in holder
         holder.dateView.setText(items.get(position).getDateString());
         holder.serviceNameView.setText(items.get(position).getServiceName());
         holder.priceView.setText(items.get(position).getPrice()+"€");
@@ -45,6 +46,7 @@ public class R10_HistoryViewAdapter extends RecyclerView.Adapter<R10_HistoryView
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
 
+                //prepare bundle to transfer info to R10_DetailsActivity
                 bundle.putString("date", holder.dateView.getText().toString());
                 bundle.putString("service_name", holder.serviceNameView.getText().toString());
                 bundle.putString("price", holder.priceView.getText().toString());

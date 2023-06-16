@@ -12,12 +12,13 @@ import java.util.List;
 
 public class R10_MainActivity extends AppCompatActivity implements R10_SelectListener{
 
-    private final String amka = "123456789";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_r10);
+
+        //todo connect with bundle to main
+        String amka = "123456789";
 
 
 
