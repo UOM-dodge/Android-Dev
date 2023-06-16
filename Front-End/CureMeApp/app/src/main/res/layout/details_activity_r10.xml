@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailed_info"
+        android:textSize="30sp"
+        android:textColor="@color/figma_blue_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:padding="15dp"
+        android:background="@drawable/shape_r10">
+
+
+<!--         DATE-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATE:"
+            android:textSize="14sp"
+
+
+
+
+
+            android:id="@+id/date_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[DATE PLACEHOLDER]"
+            android:textSize="20sp"
+
+
+
+            android:layout_below="@id/date_title"
+            android:id="@+id/date"/>
+
+
+<!--        SERVICE-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SERVICE"
+            android:textSize="14sp"
+
+            android:layout_marginTop="10dp"
+
+
+            android:layout_below="@id/date"
+            android:id="@+id/service_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[SERVICE NAME]"
+            android:textSize="30sp"
+
+
+            android:layout_below="@id/service_title"
+            android:id="@+id/service_name"/>
+
+<!--        PRICE-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRICE"
+            android:textSize="14sp"
+
+            android:layout_marginTop="10dp"
+
+
+            android:layout_below="@id/service_name"
+            android:id="@+id/price_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[PRICE]€"
+            android:textSize="55sp"
+            android:textStyle="bold"
+
+
+            android:layout_below="@id/price_title"
+            android:id="@+id/price"/>
+
+<!--        DOCTOR-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOCTOR"
+            android:textSize="14sp"
+
+            android:layout_marginTop="10dp"
+
+
+            android:layout_below="@id/price"
+            android:id="@+id/doctor_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[DOCTOR NAME]"
+            android:textSize="20sp"
+
+
+            android:layout_below="@id/doctor_title"
+            android:id="@+id/doctor"/>
+
+<!--        LOCATION-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCATION"
+            android:textSize="14sp"
+
+            android:layout_marginTop="10dp"
+
+
+            android:layout_below="@id/doctor"
+            android:id="@+id/location_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[LOCATION]"
+            android:textSize="20sp"
+
+
+            android:layout_below="@id/location_title"
+            android:id="@+id/location"/>
+
+    </RelativeLayout>
+</RelativeLayout>
