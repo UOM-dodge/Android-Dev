@@ -6,27 +6,29 @@ import java.time.format.DateTimeFormatter;
 public class Event {
     String event_id;
     String patientFullName;
-    String amka_id;
+    String patientAMKA;
     LocalDateTime date_time;
     String dateString;
-    String status;
+    String serviceID;
     int image;
+    String physio_center;
 
-    public Event(String event_id, String patientFullName, String amka_id, LocalDateTime date_time, String status, int image) {
+    public Event(String event_id, String patientFullName, String patientAMKA, LocalDateTime date_time, String serviceID, int image, String physio_center) {
         this.event_id = event_id;
         this.patientFullName = patientFullName;
-        this.amka_id = amka_id;
+        this.patientAMKA = patientAMKA;
         this.date_time = date_time;
-        this.status = status;
+        this.serviceID = serviceID;
         this.image = image;
+        this.physio_center = physio_center;
     }
 
-    public String getAmka_id() {
-        return amka_id;
+    public String getPatientAMKA() {
+        return patientAMKA;
     }
 
-    public void setAmka_id(String amka_id) {
-        this.amka_id = amka_id;
+    public void setPatientAMKA(String patientAMKA) {
+        this.patientAMKA = patientAMKA;
     }
 
     public String getEvent_id() {
@@ -63,12 +65,12 @@ public class Event {
         this.dateString = dateString;
     }
 
-    public String getStatus() {
-        return status;
+    public String getServiceID() {
+        return serviceID;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setServiceID(String serviceID) {
+        this.serviceID = serviceID;
     }
 
     public int getImage() {

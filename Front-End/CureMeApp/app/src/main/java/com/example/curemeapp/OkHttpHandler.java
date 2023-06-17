@@ -42,10 +42,11 @@ public class OkHttpHandler {
                 JSONObject json = jsonArray.getJSONObject(i);
                 String event_id = json.getString("id");
                 String patientFullName = json.getString("patientFullName");
-                String patient_amka = json.getString("amka_id");
+                String patient_amka = json.getString("patient_amka");
                 LocalDateTime date_time = LocalDateTime.parse(json.getString("date_time"), f);
-                String status = json.getString("status");
-                events.add(new Event(event_id, patientFullName, patient_amka, date_time, status, image));
+                String serviceID = json.getString("service_id");
+                String physio_center = json.getString("physio_center");
+                events.add(new Event(event_id, patientFullName, patient_amka, date_time, serviceID, image, physio_center));
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -64,5 +65,45 @@ public class OkHttpHandler {
                 body).build();
         Response response = client.newCall(request).execute();
         System.out.println("My Response: " + response);
+    }
+
+    public List<ServiceObject> requestServices(String url) throws Exception {
+        List<ServiceObject> services = new ArrayList<>();
+        OkHttpClient client = new OkHttpClient().newBuilder().build();
+        RequestBody body = RequestBody.create(" ", MediaType.parse("text/plain"));
+        Request request = new Request.Builder().url(url).method("POST", body).build();
+        Response response = client.newCall(request).execute();
+        String data = response.body().string();
+        System.out.println(data);
+
+
+        services.add(new ServiceObject("Επιλογή Παροχής", "000", "000"));
+
+        try {
+            JSONArray jsonArray = new JSONArray(data);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject json = jsonArray.getJSONObject(i);
+                String service_id = json.getString("id");
+                String service_title = json.getString("title");
+                String physio_center = json.getString("physio_center");
+                services.add(new ServiceObject(service_title, service_id, physio_center));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        return services;
+    }
+
+    public String setServices(String url) throws Exception {
+        OkHttpClient client = new OkHttpClient().newBuilder().build();
+        RequestBody body = RequestBody.create(" ", MediaType.parse("text/plain"));
+        Request request = new Request.Builder().url(url).method("POST", body).build();
+        Response response = client.newCall(request).execute();
+        String data = response.body().string();
+        System.out.println(data);
+        return data;
     }
 }

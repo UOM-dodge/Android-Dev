@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class EventViewHolder extends RecyclerView.ViewHolder {
 
     ImageView imageView;
-    TextView nameView, eventIDView, amkaView, dateView;
+    TextView nameView, eventIDView, amkaView, dateView, serviceIDView;
 
 
 
@@ -21,6 +21,8 @@ public class EventViewHolder extends RecyclerView.ViewHolder {
         eventIDView = itemView.findViewById(R.id.event_id);
         amkaView = itemView.findViewById(R.id.amka_id);
         dateView = itemView.findViewById(R.id.date);
+        serviceIDView = itemView.findViewById(R.id.service_id);
+
 
 
         itemView.setOnClickListener(new View.OnClickListener() {

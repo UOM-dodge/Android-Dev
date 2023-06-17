@@ -9,7 +9,9 @@
     <color name="beige">#DCDBB8</color>
 
     <color name="darkGray">#333533</color>
+    <color name="gray">#808A8484</color>
     <color name="lightGray">#EEE</color>
+
 
 
 </resources>
