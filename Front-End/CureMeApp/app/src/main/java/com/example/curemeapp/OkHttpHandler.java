@@ -56,4 +56,13 @@ public class OkHttpHandler {
 
         return events;
     }
+    public void requestCancel(String url) throws Exception {
+        OkHttpClient client = new OkHttpClient().newBuilder().build();
+        RequestBody body = RequestBody.create("",
+                MediaType.parse("text/plain"));
+        Request request = new Request.Builder().url(url).method("POST",
+                body).build();
+        Response response = client.newCall(request).execute();
+        System.out.println("My Response: " + response);
+    }
 }
