@@ -15,6 +15,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 public class MainActivityR2 extends AppCompatActivity {
 
     EditText code,name,description,cost;
+    final String physio_center = "1597538462";
 
 
 
@@ -66,18 +67,31 @@ public class MainActivityR2 extends AppCompatActivity {
                     bottomSheetView.findViewById(R.id.button_confirm).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Toast.makeText(MainActivityR2.this, "Εισαγωγή παροχής επιτυχής", Toast.LENGTH_SHORT).show();
-                            bottomSheetDialog.dismiss();
+                            ServiceSendObjectR2 sendObject = new ServiceSendObjectR2();
+                            String response = sendObject.setServiceData(name.getText().toString(), code.getText().toString(), description.getText().toString(), cost.getText().toString(), physio_center);
 
-                            EditText code = (EditText) findViewById(R.id.code_input);
-                            EditText name=(EditText) findViewById(R.id.name_input);
-                            EditText description =(EditText) findViewById(R.id.description_input);
-                            EditText cost=(EditText) findViewById(R.id.cost_input);
+                            if (!response.equals("SET FAILED")){
+                                Toast.makeText(MainActivityR2.this, "Εισαγωγή παροχής επιτυχής", Toast.LENGTH_SHORT).show();
+                                bottomSheetDialog.dismiss();
 
-                            code.setText("");
-                            name.setText("");
-                            description.setText("");
-                            cost.setText("");
+
+                                //Restart
+                                finish();
+                                overridePendingTransition(0,0);
+                                startActivity(getIntent());
+                                overridePendingTransition(0,0);
+
+                            } else {
+                                Toast.makeText(MainActivityR2.this, "Σφάλμα εισαγωγής", Toast.LENGTH_SHORT).show();
+                                bottomSheetDialog.dismiss();
+
+                                //Restart
+                                finish();
+                                overridePendingTransition(0,0);
+                                startActivity(getIntent());
+                                overridePendingTransition(0,0);
+                            }
+
 
                         }
                     });
