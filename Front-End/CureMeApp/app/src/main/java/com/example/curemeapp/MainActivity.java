@@ -9,10 +9,12 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-
     HomeFragment homeFragment = new HomeFragment();
     CalendarFragment calendarFragment = new CalendarFragment();
     HistoryFragment historyFragment = new HistoryFragment();
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 

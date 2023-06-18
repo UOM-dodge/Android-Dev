@@ -61,4 +61,8 @@
     <color name="md_theme_dark_surfaceTint">#5ADBC0</color>
     <color name="md_theme_dark_outlineVariant">#3F4946</color>
     <color name="md_theme_dark_scrim">#000000</color>
+    <color name="figma_main_blue">#222B45</color>
+    <color name="figma_blue_title">#212E4B</color>
+    <color name="figma_gray">#8898AF</color>
+    <color name="figma_box">#F2F0F0</color>
 </resources>
