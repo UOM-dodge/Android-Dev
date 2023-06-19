@@ -23,7 +23,7 @@
             android:resource="@xml/network_security_config" />
 
         <activity
-            android:name=".MainActivityR6"
+            android:name=".LogInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,8 +36,6 @@
             android:exported="false">
         </activity>
 
-        <activity android:name=".LogInActivity"
-            android:exported="false"/>
         <activity android:name=".MainActivityR1"
             android:exported="false"/>
 
@@ -48,6 +46,9 @@
             android:exported="false"/>
 
         <activity android:name=".MainActivityR5"
+            android:exported="false"/>
+
+        <activity android:name=".MainActivityR6"
             android:exported="false"/>
 
     </application>
