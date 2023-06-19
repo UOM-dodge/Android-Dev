@@ -23,6 +23,7 @@ public class VisitDetailsFragment extends Fragment {
         dateView = view.findViewById(R.id.date);
         serviceNameView = view.findViewById(R.id.service_name);
         priceView = view.findViewById(R.id.price);
+        //todo remove doctorNameView if doctor_name = NOT_CONFIRMED
         doctorNameView = view.findViewById(R.id.doctor);
         physioCenterView = view.findViewById(R.id.location);
 
