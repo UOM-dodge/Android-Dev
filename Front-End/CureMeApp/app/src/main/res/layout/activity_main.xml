@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityR1">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/title_container"
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cureme_title"
-            android:textColor="@color/seed"
+            android:textColor="@color/basic_app"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -69,52 +69,107 @@
                     android:id="@+id/service_creation_prompt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/poppins_regular"
                     android:paddingBottom="5dp"
                     android:text="@string/service_creation_text"
                     android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/user_prompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingBottom="15dp"
+                    android:text="@string/user_text_promt"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/input_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/code_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/code_input_hint"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/name_input_hint"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/description_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/description_input_hint"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/cost_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/cost_input_hint"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/button_container"
                 android:layout_width="match_parent"
-                android:layout_height="407dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/r1Btn"
-                    android:layout_width="fill_parent"
+                    android:id="@+id/buttonShow"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
 
                     android:background="@drawable/round_button"
                     android:fontFamily="@font/poppins_bold"
                     android:padding="10dp"
-                    android:text="@string/button1_text"
+                    android:text="@string/button_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <Button
-                    android:id="@+id/r2Btn"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/round_button"
-                    android:fontFamily="@font/poppins_bold"
-                    android:padding="10dp"
-                    android:text="@string/button2_text"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/r1Btn"
                     app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -28,7 +28,7 @@
             android:gravity="center"
             android:padding="15dp"
             android:text="@string/new_service"
-            android:textColor="@color/md_theme_light_onSecondaryContainer"
+            android:textColor="@color/black"
             android:textSize="22sp" />
 
 
@@ -38,17 +38,16 @@
             android:padding="16dp" >
 
             <ImageButton
+                android:contentDescription="@string/confirm_button"
                 android:id="@+id/button_confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
                 android:background="@drawable/baseline_check_circle_24"
-                android:contentDescription="@string/confirm_button"
                 android:text="@string/confirm_button_text" />
 
             <ImageButton
