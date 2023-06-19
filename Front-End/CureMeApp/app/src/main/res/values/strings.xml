@@ -6,12 +6,33 @@
     <!--prompt text-->
     <string name="service_creation_text">Δημιουργία νέας παροχής</string>
     <string name="user_text_promt">Συμπληρώστε τα στοιχεία της παροχής</string>
+    <string name="clinic_creation_text">Δημιουργία φυσιοθεραπευτηριου</string>
+
+    <string name="r1_text_promt">Συμπληρώστε τα στοιχεία του φυσιοθεραπευτηρίου</string>
 
     <!--input text-->
     <string name="code_input_hint">Κωδικός</string>
     <string name="name_input_hint">Όνομα</string>
     <string name="description_input_hint">Περιγραφή</string>
     <string name="cost_input_hint">Κόστος ανά συνεδρία</string>
+
+    <!--R1-->
+    <string name="r1_address_input_hint">Διεύθυνση</string>
+    <string name="r1_afm_input_hint">ΑΦΜ</string>
+
+    <!--button text-->
+    <string name="r2btn_text">Προσθηκη Συνεδριας</string>
+    <string name="r1btn_text">Δημιουργία</string>
+    <string name="button1_text">Δημιουργία φυσιοθεραπευτηριου</string>
+    <string name="button2_text">Δημιουργία νέας παροχής</string>
+
+
+
+
+
+    <!--prompt text-->
+    <string name="user_text_prompt">Συμπληρώστε τα στοιχεία της παροχής</string>
+
 
     <!--button text-->
     <string name="button_text">Προσθήκη παροχής</string>
@@ -22,4 +43,19 @@
     <string name="new_service">Θέλετε να προσθέσετε νέα παροχή;</string>
     <string name="confirm_button">confirm_button</string>
     <string name="cancel_button">cancel_button</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="name">Name</string>
+    <string name="buttoninfo">λεπτομέρειες</string>
+    <string name="next_appointment">NEXT APPOINTMENT:</string>
+    <string name="patient_not_found">Ο ΑΣΘΕΝΗΣ ΔΕ ΒΡΕΘΗΚΕ</string>
+    <string name="Back"><![CDATA[<]]></string>
+    <string name="Next"><![CDATA[>]]></string>
+    <string name="cureme">CureMe</string>
+    <string name="app">App</string>
+    <string name="cal">Ημερολόγιο</string>
+    <string name="_2023">June 2023</string>
+    <string name="cure_me_title">CureMe</string>
+    <string name="new_requests">Νέα Αιτήματα</string>
+    <string name="description">Αίτημα για ραντεβού στις:</string>
 </resources>
