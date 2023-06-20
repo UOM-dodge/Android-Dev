@@ -58,4 +58,11 @@
     <string name="cure_me_title">CureMe</string>
     <string name="new_requests">Νέα Αιτήματα</string>
     <string name="description">Αίτημα για ραντεβού στις:</string>
+    <string name="welcome_back">Καλώς ήρθες πίσω!</string>
+    <string name="enter_credentials">Συμπλήρωσε τα στοιχεία σου για να συνδεθείς</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Σύνδεση</string>
+    <string name="sign_up">Εγγραφή</string>
+    <string name="psf_title">Λειτουργίες ΠΣΦ</string>
 </resources>

@@ -1,7 +1,13 @@
 package com.example.curemeapp;
 
+import static com.example.curemeapp.LogInActivity.IP;
+import static com.example.curemeapp.LogInActivity.SHARED_PREFS;
+import static com.example.curemeapp.LogInActivity.USER_ID;
+import static com.example.curemeapp.LogInActivity.USER_TYPE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +19,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class MainActivityR2 extends AppCompatActivity {
-
+    private String myIP, userType, userID;
     EditText code,name,description,cost;
 
 
@@ -97,5 +103,12 @@ public class MainActivityR2 extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        myIP = sharedPreferences.getString(IP, "NOT_SET");
+        userType =sharedPreferences.getString(USER_TYPE, "NOT_SET");
+        userID = sharedPreferences.getString(USER_ID, "NOT_SET");
     }
 }

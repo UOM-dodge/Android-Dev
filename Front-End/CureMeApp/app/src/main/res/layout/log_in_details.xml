@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    tools:context=".R1Activity">
 
     <LinearLayout
         android:id="@+id/title_container"
@@ -18,15 +18,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ScrollView
         android:id="@+id/root_scroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/under_popup_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingTop="20dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp">
 
@@ -51,57 +51,85 @@
                     android:id="@+id/service_creation_prompt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:paddingBottom="5dp"
-                    android:text="Log in"
-                    android:textAlignment="center"
-                    android:textColor="@color/md_theme_dark_scrim"
-                    android:textSize="48sp"
+                    android:text="@string/welcome_back"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
                     android:textStyle="bold" />
 
-                <ImageView
+                <TextView
+                    android:id="@+id/user_prompt"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:src="@drawable/undraw_sign_up_n6im_1" />
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:paddingBottom="15dp"
+                    android:text="@string/enter_credentials"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/input_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/username_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/username"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/password_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="15dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="16sp" />
+
 
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/button_container"
                 android:layout_width="match_parent"
-                android:layout_height="407dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/r1Btn"
-                    android:layout_width="fill_parent"
+                    android:id="@+id/connect_btn"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
 
                     android:background="@drawable/round_button"
-                    android:padding="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
                     android:text="@string/sign_in"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <Button
-                    android:id="@+id/r2Btn"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/round_button"
-                    android:padding="10dp"
-                    android:text="@string/sign_up"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/r1Btn"
                     app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
