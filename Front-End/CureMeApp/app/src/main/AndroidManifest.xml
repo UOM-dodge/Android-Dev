@@ -49,6 +49,10 @@
 
         <activity android:name=".MainActivityR7"/>
 
+        <activity android:name=".R10_MainActivity"/>
+
+        <activity android:name=".R10_DetailsActivity"/>
+
         <activity android:name=".DoctorMenuActivity"/>
 
         <activity android:name=".WeekViewActivityR6"/>
