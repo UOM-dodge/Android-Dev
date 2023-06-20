@@ -5,8 +5,8 @@
         android:title="@string/home"
         android:icon="@drawable/baseline_home_24"/>
     <item android:id="@+id/calendar"
-        android:title="@string/calendar"
-        android:icon="@drawable/baseline_calendar_month_24"/>
+        android:title="@string/request"
+        android:icon="@drawable/baseline_add_circle_24"/>
     <item android:id="@+id/history"
         android:title="@string/detailed_history"
         android:icon="@drawable/baseline_history_24"/>

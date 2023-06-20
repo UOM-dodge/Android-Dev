@@ -51,9 +51,6 @@
 
         <activity android:name=".MainActivity_R9"/>
 
-        <activity android:name=".R10_MainActivity"/>
-
-        <activity android:name=".R10_DetailsActivity"/>
 
         <activity android:name=".DoctorMenuActivity"/>
 

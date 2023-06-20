@@ -80,4 +80,5 @@
     <string name="settings">Settings</string>
     <string name="detailed_history">Detailed History</string>
     <string name="my_upcoming">Τα Ραντεβού μου</string>
+    <string name="request">Request</string>
 </resources>

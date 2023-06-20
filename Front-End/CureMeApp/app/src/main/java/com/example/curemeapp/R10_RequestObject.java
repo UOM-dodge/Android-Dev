@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class R10_RequestObject {
-    private final String myIP = "192.168.1.100";
+    private String myIP;
 
     private List<R10_HistoryItem> items = new ArrayList<>();
 
-    public R10_RequestObject(){
-
+    public R10_RequestObject(String myIP){
+        this.myIP = myIP;
     }
 
 

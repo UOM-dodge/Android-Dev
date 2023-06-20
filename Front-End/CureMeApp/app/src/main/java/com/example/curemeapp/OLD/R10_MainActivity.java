@@ -1,4 +1,4 @@
-package com.example.curemeapp;
+package com.example.curemeapp.OLD;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,10 +7,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import java.time.LocalDateTime;
+import com.example.curemeapp.R;
+import com.example.curemeapp.R10_HistoryItem;
+import com.example.curemeapp.R10_HistoryViewAdapter;
+import com.example.curemeapp.R10_RequestObject;
+import com.example.curemeapp.R10_SelectListener;
+
 import java.util.List;
 
-public class R10_MainActivity extends AppCompatActivity implements R10_SelectListener{
+//OLD Activity --> Refactored to be a Fragment
+public class R10_MainActivity extends AppCompatActivity implements R10_SelectListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +32,8 @@ public class R10_MainActivity extends AppCompatActivity implements R10_SelectLis
     }
 
     private void createItems(String patient_amka){
-        R10_RequestObject request = new R10_RequestObject();
+        String myIP = "192.168.1.100";
+        R10_RequestObject request = new R10_RequestObject(myIP);
 
         List<R10_HistoryItem> items;
         items = request.requestItems(patient_amka);

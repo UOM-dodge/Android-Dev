@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestFragment_R9">
+
+
+    <CalendarView
+        android:id="@+id/request_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calendar_shape_r10"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:firstDayOfWeek="2"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hours_scroll"
+        android:layout_below="@id/request_calendar"
+        android:scrollbarAlwaysDrawHorizontalTrack="false">
+
+        <RadioGroup
+            android:id="@+id/request_calendar_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:isScrollContainer="true"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_button_background"
+                android:button="@null"
+                android:checked="false"
+                android:padding="10dp"
+                android:text="10:00"
+                android:textSize="40sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/calendar_shape_r10"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="10:00"
+                android:textSize="40sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/calendar_shape_r10"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="10:00"
+                android:textSize="40sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/calendar_shape_r10"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="10:00"
+                android:textSize="40sp" />
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+
+    <Spinner
+        android:id="@+id/services_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hours_scroll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+
+
+</RelativeLayout>

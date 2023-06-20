@@ -1,4 +1,4 @@
-package com.example.curemeapp;
+package com.example.curemeapp.OLD;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.curemeapp.R;
+
+//OLD Activity --> Refactored to be a Fragment
 public class R10_DetailsActivity extends AppCompatActivity {
 
     @Override
