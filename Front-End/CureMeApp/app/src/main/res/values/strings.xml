@@ -65,4 +65,9 @@
     <string name="sign_in">Σύνδεση</string>
     <string name="sign_up">Εγγραφή</string>
     <string name="psf_title">Λειτουργίες ΠΣΦ</string>
+    <string name="add_patient">Προσθήκη ασθενή</string>
+    <string name="add_edit_session">Προσθήκη επίσκεψης  Καταγραφή ενεργειών</string>
+    <string name="search_patient">Αναζήτηση ασθενή</string>
+    <string name="weekly_plan">Πλάνο Ραντεβού</string>
+    <string name="manage_requests">Διαχείριση αιτημάτων ραντεβού</string>
 </resources>

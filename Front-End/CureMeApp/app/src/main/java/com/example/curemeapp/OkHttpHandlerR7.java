@@ -43,7 +43,7 @@ public class OkHttpHandlerR7 {
             for (int i=0; i<jsonArray.length(); i++) {
                 JSONObject json = jsonArray.getJSONObject(i);
                 int request_id = json.getInt("id");
-                String fullName = json.getString("patient_amka");
+                String fullName = json.getString("patient_name");
                 LocalDateTime date_time = LocalDateTime.parse(json.getString("date_time"), f);
                 String status = json.getString("status");
                 items.add(new ItemR7(request_id, fullName, date_time, status, image));

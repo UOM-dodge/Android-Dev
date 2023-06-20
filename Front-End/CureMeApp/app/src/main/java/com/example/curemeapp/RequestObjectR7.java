@@ -9,9 +9,10 @@ public class RequestObjectR7 {
     String range_start;
     private List<ItemR7> items = new ArrayList<>();
 
-    private final String myIP = "192.168.1.100";
+    private String myIP;
 
-    public RequestObjectR7() {
+    public RequestObjectR7(String myIP) {
+        this.myIP = myIP;
 
     }
 

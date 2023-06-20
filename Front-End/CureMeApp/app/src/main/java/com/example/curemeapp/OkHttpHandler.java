@@ -26,4 +26,15 @@ public class OkHttpHandler {
         return data;
 
     }
+
+    String getDoctorName(String url) throws Exception{
+        OkHttpClient client = new OkHttpClient().newBuilder().build();
+        RequestBody body = RequestBody.create(" ", MediaType.parse("text/plain"));
+        Request request = new Request.Builder().url(url).method("POST", body).build();
+        Response response = client.newCall(request).execute();
+        String data = response.body().string();
+        System.out.println(data);
+
+        return data;
+    }
 }

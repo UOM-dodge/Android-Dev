@@ -59,8 +59,8 @@ public class MainActivityR3 extends AppCompatActivity {
 
                     PatientR3 patient = new PatientR3(  fullNameView.getText().toString(),
                             emailView.getText().toString(),
-                            addressView.getText().toString(),
-                            amkaView.getText().toString());
+                            amkaView.getText().toString(),
+                            addressView.getText().toString());
 
 
                     try {

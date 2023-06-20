@@ -94,7 +94,7 @@ public class LogInDetails extends MainActivityR1 {
             Intent intent = new Intent(getApplicationContext(), MainActivityR1.class);
             startActivity(intent);
         } else if (userType.equals("DOCTOR")) {
-            Intent intent = new Intent(getApplicationContext(), MainActivityR3.class);
+            Intent intent = new Intent(getApplicationContext(), DoctorMenuActivity.class);
             startActivity(intent);
         } else if (userType.equals("PATIENT")) {
             Intent intent = new Intent(getApplicationContext(), MainActivityR6.class);

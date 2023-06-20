@@ -2,6 +2,7 @@ package com.example.curemeapp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,10 +22,12 @@ import android.widget.Button;
 public class ItemAdapterR7 extends RecyclerView.Adapter<ItemAdapterR7.ItemViewHolder> {
     private final Context mCtx;
     private final List<ItemR7> itemList;
+    private String myIP;
 
-    public ItemAdapterR7(Context mCtx, List<ItemR7> itemList) {
+    public ItemAdapterR7(Context mCtx, List<ItemR7> itemList, String myIP) {
         this.mCtx = mCtx;
         this.itemList = itemList;
+        this.myIP = myIP;
     }
 
     @NonNull
@@ -52,11 +55,15 @@ public class ItemAdapterR7 extends RecyclerView.Adapter<ItemAdapterR7.ItemViewHo
 
                 try {
                     int requestID = itemList.get(position).getRequestID();
-                    RequestObjectR7 request = new RequestObjectR7();
+                    RequestObjectR7 request = new RequestObjectR7(myIP);
                     String response = request.requestConfirmed(requestID);
                     System.out.println(response);
-                    //TODO make MainActivity refresh on btnClick (maybe Interface class)
+
+                    // Refresh Activity
+                    Intent intent = new Intent(mCtx, MainActivityR7.class);
+                    v.getContext().startActivity(intent);
                     Toast.makeText(mCtx, "Προστέθηκε νέο ραντεβού!", Toast.LENGTH_SHORT).show();
+
                 } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(mCtx, "Σφάλμα στην Βάση Δεδομένων", Toast.LENGTH_SHORT).show();
@@ -70,10 +77,13 @@ public class ItemAdapterR7 extends RecyclerView.Adapter<ItemAdapterR7.ItemViewHo
             public void onClick(View v) {
                 try {
                     int requestID = itemList.get(position).getRequestID();
-                    RequestObjectR7 request = new RequestObjectR7();
+                    RequestObjectR7 request = new RequestObjectR7(myIP);
                     String response = request.requestCanceled(requestID);
                     System.out.println(response);
-                    //TODO make MainActivity refresh on btnClick (maybe Interface class)
+
+                    // Refresh Activity
+                    Intent intent = new Intent(mCtx, MainActivityR7.class);
+                    v.getContext().startActivity(intent);
                     Toast.makeText(mCtx, "Απορρίφθηκε ραντεβού!", Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     e.printStackTrace();
