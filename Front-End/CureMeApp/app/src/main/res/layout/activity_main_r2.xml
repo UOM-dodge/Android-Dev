@@ -20,24 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/cure_me_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cureme_title"
-            android:textColor="@color/seed"
-            android:textSize="24sp"
-            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/app_title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/app_title"
-            android:textAlignment="textStart"
-            android:textColor="@color/md_theme_light_error"
-            android:textSize="24sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <ScrollView
@@ -170,6 +153,7 @@
                     android:fontFamily="@font/poppins_bold"
                     android:padding="10dp"
                     android:text="@string/button_text"
+                    android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

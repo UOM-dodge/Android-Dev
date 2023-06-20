@@ -24,6 +24,13 @@ public class LogInDetails extends MainActivityR1 {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.log_in_details);
 
+        //LOGO ACTION BAR - START
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.logo_200);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //LOGO ACTION BAR - END
+
         TextView usernameView, passwordView;
 
         usernameView = findViewById(R.id.username_input);

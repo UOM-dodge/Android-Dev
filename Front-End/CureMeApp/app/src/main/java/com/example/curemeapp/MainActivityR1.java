@@ -14,6 +14,13 @@ public class MainActivityR1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_r1);
 
+        //LOGO ACTION BAR - START
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.logo_200);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //LOGO ACTION BAR - END
+
 
 
         Button r1Btn = findViewById(R.id.r1Btn);

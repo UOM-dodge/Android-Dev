@@ -21,10 +21,12 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_screen);
 
+        //LOGO ACTION BAR - START
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.logo_200);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //LOGO ACTION BAR - END
 
         Button logInBtn = findViewById(R.id.r1Btn);
         logInBtn.setOnClickListener(new View.OnClickListener() {
