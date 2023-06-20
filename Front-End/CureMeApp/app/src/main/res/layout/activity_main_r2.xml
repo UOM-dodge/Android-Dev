@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivityR2">
 
     <LinearLayout
         android:id="@+id/title_container"
@@ -104,7 +104,7 @@
                     android:hint="@string/code_input_hint"
                     android:inputType="textPersonName"
                     android:padding="15dp"
-                    android:textColor="@color/md_theme_dark_outline"
+                    android:textColor="@color/md_theme_dark_scrim"
                     android:textSize="16sp" />
 
                 <EditText
@@ -118,21 +118,25 @@
                     android:hint="@string/name_input_hint"
                     android:inputType="textPersonName"
                     android:padding="15dp"
-                    android:textColor="@color/md_theme_dark_outline"
+                    android:textColor="@color/md_theme_light_scrim"
                     android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/description_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="150dp"
+                    android:maxHeight="300dp"
+                    android:gravity="top|left"
+                    android:isScrollContainer="true"
                     android:layout_margin="10dp"
                     android:background="@drawable/rounded_edit_text"
                     android:ems="10"
                     android:fontFamily="@font/poppins_regular"
                     android:hint="@string/description_input_hint"
-                    android:inputType="textPersonName"
+                    android:inputType="textMultiLine"
                     android:padding="15dp"
-                    android:textColor="@color/md_theme_dark_outline"
+                    android:textColor="@color/md_theme_dark_scrim"
                     android:textSize="16sp" />
 
                 <EditText
@@ -146,7 +150,7 @@
                     android:hint="@string/cost_input_hint"
                     android:inputType="number"
                     android:padding="15dp"
-                    android:textColor="@color/md_theme_dark_outline"
+                    android:textColor="@color/md_theme_light_scrim"
                     android:textSize="16sp" />
             </LinearLayout>
 
