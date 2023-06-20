@@ -4,12 +4,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-public class Event {
+public class Event_R9 {
     String dateString, serviceName, price, daysLeft, itemID, doctorName, physioCenterName, status;
     LocalDateTime dateTime;
 
 
-    public Event(String serviceName, String price, String itemID, String doctorName, String physioCenterName, LocalDateTime dateTime, String status) {
+    public Event_R9(String serviceName, String price, String itemID, String doctorName, String physioCenterName, LocalDateTime dateTime, String status) {
         this.serviceName = serviceName;
         this.price = price;
         this.itemID = itemID;

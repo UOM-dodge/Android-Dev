@@ -16,9 +16,9 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class OkHttpHandler {
+public class OkHttpHandler_R9 {
 
-    public OkHttpHandler() {
+    public OkHttpHandler_R9() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
     }
@@ -36,8 +36,8 @@ public class OkHttpHandler {
         return data;
     }
 
-    public List<Event> requestUpcomingVisits(String url) throws Exception{
-        List<Event> events = new ArrayList<>();
+    public List<Event_R9> requestUpcomingVisits(String url) throws Exception{
+        List<Event_R9> events = new ArrayList<>();
         OkHttpClient client = new OkHttpClient().newBuilder().build();
         RequestBody body = RequestBody.create(" ", MediaType.parse("text/plain"));
         Request request = new Request.Builder().url(url).method("POST", body).build();
@@ -59,7 +59,7 @@ public class OkHttpHandler {
                 String doctorName = json.getString("doctor_name");
                 String physioCenterName = json.getString("physio_center_name");
                 String status = json.getString("status");
-                events.add(new Event(serviceName, price, itemID, doctorName, physioCenterName, dateTime, status));
+                events.add(new Event_R9(serviceName, price, itemID, doctorName, physioCenterName, dateTime, status));
 
             }
         } catch (Exception e) {

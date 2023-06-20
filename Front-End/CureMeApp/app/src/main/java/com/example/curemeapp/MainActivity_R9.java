@@ -9,19 +9,16 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_R9 extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    HomeFragment homeFragment = new HomeFragment();
-    CalendarFragment calendarFragment = new CalendarFragment();
-    HistoryFragment historyFragment = new HistoryFragment();
+    HomeFragment_R9 homeFragment = new HomeFragment_R9();
+    CalendarFragment_R9 calendarFragment = new CalendarFragment_R9();
+    HistoryFragment_R9 historyFragment = new HistoryFragment_R9();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_r9);
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);

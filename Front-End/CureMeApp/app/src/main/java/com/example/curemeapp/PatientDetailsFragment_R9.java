@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 
-public class PatientDetailsFragment extends Fragment {
+public class PatientDetailsFragment_R9 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,7 +19,7 @@ public class PatientDetailsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PatientDetailsFragment() {
+    public PatientDetailsFragment_R9() {
         // Required empty public constructor
     }
 
@@ -29,6 +29,6 @@ public class PatientDetailsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_patient_details, container, false);
+        return inflater.inflate(R.layout.fragment_patient_details_r9, container, false);
     }
 }

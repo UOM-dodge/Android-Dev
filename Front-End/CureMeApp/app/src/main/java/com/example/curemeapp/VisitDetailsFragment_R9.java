@@ -10,12 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class VisitDetailsFragment extends Fragment {
+public class VisitDetailsFragment_R9 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.visit_details_fragment, container, false);
+        final View view = inflater.inflate(R.layout.visit_details_fragment_r9, container, false);
 
         TextView daysLeftView, dateView, serviceNameView, priceView, doctorNameView, physioCenterView;
 

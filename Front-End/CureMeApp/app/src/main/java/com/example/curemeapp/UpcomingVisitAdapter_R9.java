@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class UpcomingVisitAdapter extends RecyclerView.Adapter<UpcomingVisitViewHolder> {
+public class UpcomingVisitAdapter_R9 extends RecyclerView.Adapter<UpcomingVisitViewHolder_R9> {
 
-    List<Event> events;
-    SelectListener listener;
+    List<Event_R9> events;
+    SelectListener_R9 listener;
     Context context;
 
 
-    public UpcomingVisitAdapter(Context context, List<Event> events, SelectListener listener) {
+    public UpcomingVisitAdapter_R9(Context context, List<Event_R9> events, SelectListener_R9 listener) {
         this.events = events;
         this.listener = listener;
         this.context = context;
@@ -26,12 +26,12 @@ public class UpcomingVisitAdapter extends RecyclerView.Adapter<UpcomingVisitView
 
     @NonNull
     @Override
-    public UpcomingVisitViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new UpcomingVisitViewHolder(LayoutInflater.from(context).inflate(R.layout.upcoming_view, parent, false));
+    public UpcomingVisitViewHolder_R9 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new UpcomingVisitViewHolder_R9(LayoutInflater.from(context).inflate(R.layout.upcoming_view_r9, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UpcomingVisitViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UpcomingVisitViewHolder_R9 holder, int position) {
         holder.dateView.setText(events.get(position).getDateString());
         holder.serviceNameView.setText(events.get(position).getServiceName());
         holder.priceView.setText(events.get(position).getPrice()+"€");

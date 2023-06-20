@@ -1,16 +1,15 @@
 package com.example.curemeapp;
 
-import java.security.spec.ECField;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RequestHandler {
+public class RequestHandle_R9 {
     private final String myIP = "192.168.1.100";
-    private List<Event> events = new ArrayList<>();
+    private List<Event_R9> events = new ArrayList<>();
 
-    public RequestHandler(){
+    public RequestHandle_R9(){
 
     }
 
@@ -23,7 +22,7 @@ public class RequestHandler {
                         "&date_time="+date_time;
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandler_R9 okHttpHandler = new OkHttpHandler_R9();
             response = okHttpHandler.setPatientRequest(url);
         }catch (Exception e){
             e.printStackTrace();
@@ -32,7 +31,7 @@ public class RequestHandler {
         return response;
     }
 
-    public List<Event> requestUpcomingVisits(String patient_amka){
+    public List<Event_R9> requestUpcomingVisits(String patient_amka){
         LocalDateTime dateNow = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String today = dateNow.format(formatter);
@@ -42,7 +41,7 @@ public class RequestHandler {
                                                                         +"&date_time="+today;
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandler_R9 okHttpHandler = new OkHttpHandler_R9();
             this.events = okHttpHandler.requestUpcomingVisits(url);
         }catch (Exception e){
             e.printStackTrace();

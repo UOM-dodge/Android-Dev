@@ -1,20 +1,18 @@
 package com.example.curemeapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 
-public class HomeFragment extends Fragment implements SelectListener {
+public class HomeFragment_R9 extends Fragment implements SelectListener_R9 {
 
 
 
@@ -22,7 +20,7 @@ public class HomeFragment extends Fragment implements SelectListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home_r9, container, false);
 
         String amka = "123456789";
         createEvents(amka, view);
@@ -39,13 +37,13 @@ public class HomeFragment extends Fragment implements SelectListener {
     }
 
     private void createEvents(String patient_amka, View view) {
-        RequestHandler request = new RequestHandler();
-        List<Event> events;
+        RequestHandle_R9 request = new RequestHandle_R9();
+        List<Event_R9> events;
         events = request.requestUpcomingVisits(patient_amka);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new UpcomingVisitAdapter(getContext(), events, this));
+        recyclerView.setAdapter(new UpcomingVisitAdapter_R9(getContext(), events, this));
 
     }
 
@@ -62,7 +60,7 @@ public class HomeFragment extends Fragment implements SelectListener {
 
 
         getActivity().getSupportFragmentManager().beginTransaction()
-                .replace(((ViewGroup)getView().getParent()).getId(), VisitDetailsFragment.class, bundle)
+                .replace(((ViewGroup)getView().getParent()).getId(), VisitDetailsFragment_R9.class, bundle)
                 .addToBackStack(null)
                 .commit();
 

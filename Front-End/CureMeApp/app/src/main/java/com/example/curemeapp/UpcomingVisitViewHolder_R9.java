@@ -6,12 +6,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class UpcomingVisitViewHolder extends RecyclerView.ViewHolder {
+public class UpcomingVisitViewHolder_R9 extends RecyclerView.ViewHolder {
 
     TextView daysLeftView, dateView, serviceNameView, priceView, itemIDView, doctorNameView, physioCenterView;
 
 
-    public UpcomingVisitViewHolder(@NonNull View itemView) {
+    public UpcomingVisitViewHolder_R9(@NonNull View itemView) {
         super(itemView);
         daysLeftView = itemView.findViewById(R.id.days_left);
         dateView = itemView.findViewById(R.id.date);
