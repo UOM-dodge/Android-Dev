@@ -69,4 +69,8 @@
     <color name="button_accept_text_color">#67C1AC</color>
     <color name="button_decline_text_color">#DA2C38</color>
     <color name="background_box">#F5F7FB</color>
+    <color name="figma_main_blue">#222B45</color>
+    <color name="figma_blue_title">#212E4B</color>
+    <color name="figma_gray">#8898AF</color>
+    <color name="figma_box">#F2F0F0</color>
 </resources>
