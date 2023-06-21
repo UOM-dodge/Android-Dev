@@ -23,10 +23,19 @@ public class WeekViewActivityR6 extends AppCompatActivity implements CalendarAda
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_week_view_r6);
-        initWidgets();
-        CalendarUtilsR6.selectedDate = LocalDate.now();
-        setWeekView();
+        setContentView(R.layout.activity_week_view_r6_v2);
+
+
+        //LOGO ACTION BAR - START
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.logo_200);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //LOGO ACTION BAR - END
+
+//        initWidgets();
+//        CalendarUtilsR6.selectedDate = LocalDate.now();
+//        setWeekView();
     }
 
     private void initWidgets()

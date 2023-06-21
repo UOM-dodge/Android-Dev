@@ -38,6 +38,11 @@ public class MainActivity_R9 extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
+        Bundle bundle = new Bundle();
+        bundle.putString("myIP", myIP);
+        bundle.putString("userID", userID);
+        homeFragment.setArguments(bundle);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -48,6 +53,7 @@ public class MainActivity_R9 extends AppCompatActivity {
                 bundle.putString("userID", userID);
                 int itemId = item.getItemId();
                 if (itemId == R.id.home) {
+                    homeFragment.setArguments(bundle);
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
                     return true;
                 } else if (itemId == R.id.calendar) {

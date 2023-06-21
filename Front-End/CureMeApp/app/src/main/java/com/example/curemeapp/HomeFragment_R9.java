@@ -16,14 +16,19 @@ public class HomeFragment_R9 extends Fragment implements SelectListener_R9 {
 
 
 
+    private String myIP, patient_amka;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home_r9, container, false);
 
-        String amka = "123456789";
-        createEvents(amka, view);
+        assert getArguments() != null;
+        myIP = getArguments().getString("myIP");
+        patient_amka = getArguments().getString("userID");
+
+
+        createEvents(patient_amka, view);
 
 
 
@@ -37,7 +42,7 @@ public class HomeFragment_R9 extends Fragment implements SelectListener_R9 {
     }
 
     private void createEvents(String patient_amka, View view) {
-        RequestHandle_R9 request = new RequestHandle_R9();
+        RequestHandle_R9 request = new RequestHandle_R9(myIP);
         List<Event_R9> events;
         events = request.requestUpcomingVisits(patient_amka);
 

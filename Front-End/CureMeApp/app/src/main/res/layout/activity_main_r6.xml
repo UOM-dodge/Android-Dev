@@ -7,61 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivityR6">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cureme"
-        android:textColor="@color/seed"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
-        app:layout_constraintVertical_bias="0.036"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app"
-        android:textColor="@color/md_theme_light_error"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
-
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Εβοδομαδιαίο Ημερολόγιο"
-        android:textColor="@color/md_theme_light_onPrimary"
+        android:layout_marginTop="42dp"
         android:background="@color/md_theme_light_primary"
         android:onClick="weeklyAction"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:text="Εβοδομαδιαίο Ημερολόγιο"
+        android:textColor="@color/md_theme_light_onPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/seed"
+        android:layout_marginTop="1dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/button">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,7 +38,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@color/seed"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <Button
                 android:layout_width="0dp"
@@ -78,7 +48,7 @@
                 android:background="@null"
                 android:onClick="previousMonthAction"
                 android:text="@string/Back"
-                android:textColor="@color/seed"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -90,9 +60,9 @@
                 android:background="@color/seed"
                 android:text="@string/_2023"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="0dp"
@@ -101,7 +71,7 @@
                 android:background="@null"
                 android:onClick="nextMonthAction"
                 android:text="@string/Next"
-                android:textColor="@color/seed"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -111,7 +81,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/seed"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="0dp"
@@ -119,7 +90,7 @@
                 android:layout_weight="1"
                 android:text="Δε"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
 
@@ -129,7 +100,7 @@
                 android:layout_weight="1"
                 android:text="Τρ"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
 
@@ -139,7 +110,7 @@
                 android:layout_weight="1"
                 android:text="Τε"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
             <TextView
@@ -180,12 +151,18 @@
 
         </LinearLayout>
 
+        <CalendarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/calendar_shape_r10"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/calendarRecyclerView"
-            android:layout_width="413dp"
-            android:layout_height="310dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/seed"
-            />
+            android:visibility="gone"/>
 
     </LinearLayout>
 

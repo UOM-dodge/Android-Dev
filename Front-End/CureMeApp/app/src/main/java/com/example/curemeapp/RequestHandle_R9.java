@@ -6,19 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RequestHandle_R9 {
-    private final String myIP = "192.168.1.100";
+    private String myIP;
     private List<Event_R9> events = new ArrayList<>();
 
-    public RequestHandle_R9(){
+    public RequestHandle_R9(String myIP){
+        this.myIP = myIP;
 
     }
 
 
-    public String setPatientRequest(String patient_amka, String physio_center, String date_time){
+    public String setPatientRequest(String patient_amka, String service_id, String date_time){
         String response = "SET FAILED";
-        String url =    "http://"+myIP+"cure_db/setPatientRequest.php"+
+        String url =    "http://"+myIP+"/cure_db/setPatientRequest.php"+
                         "?patient_amka="+patient_amka+
-                        "&physio_center="+physio_center+
+                        "&service_id="+service_id+
                         "&date_time="+date_time;
 
         try {

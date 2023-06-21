@@ -5,7 +5,5 @@
         android:radius="60px" />
     <solid
         android:color="@color/md_theme_light_primary" />
-    <stroke
-        android:width="2dp"
-        android:color="@color/black" />
+ 
 </shape>
