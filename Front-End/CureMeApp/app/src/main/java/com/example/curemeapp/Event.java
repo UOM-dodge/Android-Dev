@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Event {
+
+    String type;
     String event_id;
     String patientFullName;
     String patientAMKA;
@@ -13,7 +15,7 @@ public class Event {
     int image;
     String physio_center;
 
-    public Event(String event_id, String patientFullName, String patientAMKA, LocalDateTime date_time, String serviceID, int image, String physio_center) {
+    public Event(String event_id, String patientFullName, String patientAMKA, LocalDateTime date_time, String serviceID, int image, String physio_center, String type) {
         this.event_id = event_id;
         this.patientFullName = patientFullName;
         this.patientAMKA = patientAMKA;
@@ -21,6 +23,7 @@ public class Event {
         this.serviceID = serviceID;
         this.image = image;
         this.physio_center = physio_center;
+        this.type = type;
     }
 
     public String getPatientAMKA() {
@@ -79,5 +82,21 @@ public class Event {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getPhysio_center() {
+        return physio_center;
+    }
+
+    public void setPhysio_center(String physio_center) {
+        this.physio_center = physio_center;
     }
 }

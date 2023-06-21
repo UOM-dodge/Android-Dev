@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -75,12 +77,23 @@ public class ResultActivity extends AppCompatActivity implements SelectListener{
 
                 SearchObject searchObject = new SearchObject();
 
-                System.out.println(eventID[1]+" "+serviceID[1]+" "+notes);
+                TextView type = findViewById(R.id.edit_type);
+                String typeString = type.getText().toString();
 
-
+                String response = null;
                 //todo make toast for no change
-                String response = searchObject.setService(eventID[1], serviceID[1], notes);
-                System.out.println(response);
+                if(typeString.equals("REQUEST")){
+                    LocalDateTime dateNow = LocalDateTime.now();
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+                    String dateStringNow = dateNow.format(formatter);
+                    response = searchObject.setService(eventID[1], serviceID[1], doctor_id, dateStringNow);
+                    System.out.println(response);
+
+                } else if (typeString.equals("SESSION")) {
+                    response = searchObject.setService(eventID[1], serviceID[1], notes);
+                    System.out.println(response);
+                }
+
 
                 finish();
                 overridePendingTransition(0, 0);
@@ -136,12 +149,26 @@ public class ResultActivity extends AppCompatActivity implements SelectListener{
     }
 
     @Override
-    public void onItemClicked(String eventID) {
+    public void onItemClicked(String eventID, String type) {
         RelativeLayout setProperties = findViewById(R.id.setProperties);
         setProperties.setVisibility(View.VISIBLE);
 
         TextView eventIDProperties = findViewById(R.id.event_id_properties);
         eventIDProperties.setText("Αρ. Ραντεβού: "+ eventID);
+        TextView eventType = findViewById(R.id.edit_type);
+        eventType.setText(type);
+
+        if (type.equals("REQUEST")){
+            EditText notes = findViewById(R.id.notes);
+            notes.setVisibility(View.GONE);
+            Button setButton = findViewById(R.id.set_button);
+            setButton.setText("Προσθήκη Επίσκεψης");
+        } else if (type.equals("SESSION")) {
+            EditText notes = findViewById(R.id.notes);
+            notes.setVisibility(View.VISIBLE);
+            Button setButton = findViewById(R.id.set_button);
+            setButton.setText("Επιβεβαίωση Επεξεργασίας");
+        }
 
 
     }

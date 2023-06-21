@@ -1,5 +1,7 @@
 package com.example.curemeapp;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,8 +80,6 @@ public class SearchObject {
         if (!serviceID.equals("000")){
             url = "http://"+myIP+"/cure_db/setServices.php?event_id="+eventID+"&service_id="+serviceID+"&notes="+notes;
             //todo add notes as output stream on POST body
-
-
         }
 
         else {
@@ -99,4 +99,28 @@ public class SearchObject {
     }
 
 
+    public String setService(String eventID, String serviceID, String doctor_id, String dateNow) {
+        String response = "SET FAILED";
+        String url = "";
+
+        if (!serviceID.equals("000")){
+            //todo new
+            url = "http://"+myIP+"/cure_db/completeRequest.php?event_id="+eventID+"&doctor_id="+doctor_id+"&date="+dateNow+"&service_id="+serviceID;
+        }
+
+        else {
+            //todo new
+            url = "http://"+myIP+"/cure_db/completeRequest.php?event_id="+eventID+"&doctor_id="+doctor_id+"&date="+dateNow;
+        }
+
+        try {
+            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            response = okHttpHandler.setServices(url);
+        } catch (Exception e){
+            e.printStackTrace();
+            return "SET FAILED";
+        }
+
+        return response;
+    }
 }

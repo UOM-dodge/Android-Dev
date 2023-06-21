@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class EventViewHolder extends RecyclerView.ViewHolder {
 
     ImageView imageView;
-    TextView nameView, eventIDView, amkaView, dateView, serviceIDView;
+    TextView nameView, eventIDView, amkaView, dateView, serviceIDView, physioView, typeView, statusView;
 
 
 
@@ -22,6 +22,9 @@ public class EventViewHolder extends RecyclerView.ViewHolder {
         amkaView = itemView.findViewById(R.id.amka_id);
         dateView = itemView.findViewById(R.id.date);
         serviceIDView = itemView.findViewById(R.id.service_id);
+        physioView = itemView.findViewById(R.id.physio_center);
+        typeView = itemView.findViewById(R.id.type);
+        statusView = itemView.findViewById(R.id.status);
 
 
 

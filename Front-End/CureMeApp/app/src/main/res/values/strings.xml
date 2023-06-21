@@ -3,6 +3,7 @@
 
     <string name="button">Προσθήκη επίσκεψης</string>
     <string name="buttonTime">Ώρα επίσκεψης</string>
+    <string name="avatar">avatar</string>
 
     <string-array name="actions">
         <item>Item 1</item>

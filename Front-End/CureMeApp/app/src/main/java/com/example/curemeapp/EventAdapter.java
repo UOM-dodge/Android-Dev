@@ -38,6 +38,16 @@ public class EventAdapter extends RecyclerView.Adapter<EventViewHolder> {
         holder.amkaView.setText("AMKA: " + events.get(position).getPatientAMKA());
         holder.eventIDView.setText("Αρ. Ραντεβού: " + events.get(position).getEvent_id());
         holder.imageView.setImageResource(events.get(position).getImage());
+        holder.physioView.setText(events.get(position).getPhysio_center());
+        holder.typeView.setText(events.get(position).getType());
+
+        if (events.get(position).getType().equals("REQUEST")){
+            holder.statusView.setText("Κατάσταση: ΕΠΙΒΕΒΑΙΩΜΕΝΗ");
+            holder.statusView.setVisibility(View.VISIBLE);
+        } else if (events.get(position).getType().equals("SESSION")) {
+            holder.statusView.setText("Κατάσταση: ΕΚΤΕΛΕΣΤΗΚΕ");
+            holder.statusView.setVisibility(View.VISIBLE);
+        }
 
         if (!events.get(position).getServiceID().equals("null")){
             holder.serviceIDView.setText("Κωδ. Παροχής: "+events.get(position).getServiceID());
@@ -49,7 +59,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventViewHolder> {
             @Override
             public void onClick(View v) {
                 String eventID = events.get(position).getEvent_id();
-                listener.onItemClicked(eventID);
+                String type = events.get(position).getType();
+                listener.onItemClicked(eventID, type);
 
             }
         });

@@ -46,7 +46,8 @@ public class OkHttpHandler {
                 LocalDateTime date_time = LocalDateTime.parse(json.getString("date_time"), f);
                 String serviceID = json.getString("service_id");
                 String physio_center = json.getString("physio_center");
-                events.add(new Event(event_id, patientFullName, patient_amka, date_time, serviceID, image, physio_center));
+                String type = json.getString("type");
+                events.add(new Event(event_id, patientFullName, patient_amka, date_time, serviceID, image, physio_center, type));
             }
         } catch (JSONException e) {
             e.printStackTrace();
