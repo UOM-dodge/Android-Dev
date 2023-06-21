@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyHolder> {
+public class ContactsAdapterR5 extends RecyclerView.Adapter<ContactsAdapterR5.MyHolder> {
     List<PatientR5> patientsList;
     ArrayList<PatientR5> arrayList;
     private RecyclerViewInterfaceR5 itemClickListener;
@@ -24,7 +24,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyHold
         this.patientsList = patientsList;
         notifyDataSetChanged();
     }
-    public ContactsAdapter(List<PatientR5> patientsList){
+    public ContactsAdapterR5(List<PatientR5> patientsList){
         this.patientsList = patientsList;
 
 

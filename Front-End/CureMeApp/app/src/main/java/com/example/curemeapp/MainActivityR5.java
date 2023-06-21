@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MainActivityR5 extends AppCompatActivity  {
 
-    private final String myIP = "192.168.1.3";
+    private final String myIP = "192.168.1.100";
             //"192.168.1.68";
     List<PatientR5> patientList;
     SearchView searchView;
@@ -57,7 +57,7 @@ public class MainActivityR5 extends AppCompatActivity  {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivityR5.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
 
-        ContactsAdapter contactsAdapter = new ContactsAdapter(patientList);
+        ContactsAdapterR5 contactsAdapter = new ContactsAdapterR5(patientList);
         recyclerView.setAdapter(contactsAdapter);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -76,7 +76,7 @@ public class MainActivityR5 extends AppCompatActivity  {
                     }
                 }
 
-                ContactsAdapter contactsAdapter = (ContactsAdapter) recyclerView.getAdapter();
+                ContactsAdapterR5 contactsAdapter = (ContactsAdapterR5) recyclerView.getAdapter();
                 if (contactsAdapter != null) {
                     if (filteredList.isEmpty()) {
                         // Show the "Item not found" message and image
