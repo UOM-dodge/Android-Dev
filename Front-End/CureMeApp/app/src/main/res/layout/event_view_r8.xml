@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:layout_marginHorizontal="5dp"
+    android:background="@drawable/shape_background_r8">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:contentDescription="@string/avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/patient_name"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@id/imageView"
+        android:textSize="20sp"
+        android:text="Name"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:layout_below="@id/patient_name"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@id/imageView"
+        android:text="Date"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/event_id"
+        android:layout_below="@id/amka_id"
+        android:layout_marginStart="20dp"
+
+        android:textColor="@color/black"
+        android:layout_toStartOf="@id/imageView"
+        android:text="Event ID"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/amka_id"
+        android:layout_below="@id/date"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@id/imageView"
+        android:text="AMKA"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/service_id"
+        android:layout_below="@id/event_id"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:layout_toStartOf="@id/imageView"
+        android:text="Service ID:"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/physio_center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/type"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:layout_below="@id/service_id"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:layout_toStartOf="@id/imageView"
+        android:text="Status:"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>
