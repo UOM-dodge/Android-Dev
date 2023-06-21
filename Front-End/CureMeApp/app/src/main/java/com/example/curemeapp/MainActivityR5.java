@@ -1,11 +1,16 @@
 package com.example.curemeapp;
 
 
+import static com.example.curemeapp.LogInActivity.IP;
+import static com.example.curemeapp.LogInActivity.SHARED_PREFS;
+import static com.example.curemeapp.LogInActivity.USER_ID;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,8 +23,7 @@ import java.util.List;
 
 public class MainActivityR5 extends AppCompatActivity  {
 
-    private final String myIP = "192.168.1.100";
-            //"192.168.1.68";
+    private String myIP, userID;
     List<PatientR5> patientList;
     SearchView searchView;
     RecyclerView recyclerView;
@@ -33,6 +37,17 @@ public class MainActivityR5 extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_r5);
+        loadData();
+
+        //LOGO ACTION BAR - START
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.logo_200);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //LOGO ACTION BAR - END
+
+
+
         ImageView imageView = findViewById(R.id.imageView);
         notFoundLayout = findViewById(R.id.notFoundLayout);
         searchView = findViewById(R.id.searchView);
@@ -93,39 +108,13 @@ public class MainActivityR5 extends AppCompatActivity  {
             }
         });
 
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {@Override
-//        public boolean onQueryTextSubmit(String query) {
-//            return false;
-//        }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                ArrayList<Patient> filteredList = new ArrayList<>();
-//
-//                for (Patient item : patientList) {
-//                    if (item.getName().toLowerCase().contains(newText.toLowerCase())) {
-//                        filteredList.add(item);
-//                    }
-//                }
-//
-//                ContactsAdapter contactsAdapter = (ContactsAdapter) recyclerView.getAdapter();
-//                //ayto to if den yphrxe mporei kai na to bgalw
-//                if (contactsAdapter != null) {
-//                    if (filteredList.isEmpty()) {
-//                        // Show the "Item not found" message and image
-//                        notFoundLayout.setVisibility(View.VISIBLE);
-//                        recyclerView.setVisibility(View.GONE);
-//                    } else {
-//                        // Hide the "Item not found" message and image
-//                        notFoundLayout.setVisibility(View.GONE);
-//                        recyclerView.setVisibility(View.VISIBLE);
-//                        contactsAdapter.setFilteredList(filteredList);
-//                    }
-//                }
-//                return true;
-//            }
-//        });
 
+    }
+
+    public void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        myIP = sharedPreferences.getString(IP, "NOT_SET");
+        userID = sharedPreferences.getString(USER_ID, "NOT_SET");
     }
 
 

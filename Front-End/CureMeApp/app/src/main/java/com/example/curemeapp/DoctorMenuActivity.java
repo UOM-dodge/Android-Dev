@@ -63,7 +63,7 @@ public class DoctorMenuActivity extends AppCompatActivity {
         searchPatientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //todo merge new R5
+                //todo R5 merged, no error so far
                 Intent intent = new Intent(getApplicationContext(), MainActivityR5.class);
                 startActivity(intent);
             }

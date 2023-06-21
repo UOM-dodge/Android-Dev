@@ -20,24 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/cure_me_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cureme_title"
-            android:textColor="@color/seed"
-            android:textSize="24sp"
-            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/app_title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/app_title"
-            android:textAlignment="textStart"
-            android:textColor="@color/app_title"
-            android:textSize="24sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <ScrollView
@@ -69,7 +52,7 @@
                     android:id="@+id/service_creation_prompt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/poppins_bold"
                     android:paddingBottom="5dp"
                     android:text="@string/clinic_creation_text"
                     android:textColor="@color/black"
@@ -80,7 +63,7 @@
                     android:id="@+id/user_prompt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/poppins_regular"
                     android:paddingBottom="15dp"
                     android:text="@string/r1_text_promt"
                     android:textSize="14sp" />
@@ -100,7 +83,7 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/rounded_edit_text"
                     android:ems="10"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/poppins_regular"
                     android:hint="@string/name_input_hint"
                     android:inputType="textPersonName"
                     android:padding="15dp"
@@ -114,7 +97,7 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/rounded_edit_text"
                     android:ems="10"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/poppins_regular"
                     android:hint="@string/r1_address_input_hint"
                     android:inputType="textPersonName"
                     android:padding="15dp"
@@ -128,7 +111,7 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/rounded_edit_text"
                     android:ems="10"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/poppins_regular"
                     android:hint="@string/r1_afm_input_hint"
                     android:inputType="textPersonName"
                     android:padding="15dp"

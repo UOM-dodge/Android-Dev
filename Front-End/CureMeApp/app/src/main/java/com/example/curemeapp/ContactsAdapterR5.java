@@ -41,23 +41,13 @@ public class ContactsAdapterR5 extends RecyclerView.Adapter<ContactsAdapterR5.My
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder,int position) {
-       // Patient test = arrayList.get(position);
-//        holder.getName().setText(test.getName());
-//        holder.getInfoTextView().setText(test.getAMKA());
-//        holder.getNumberTextView().setText(test.getPhone());
-//        holder.getImg().setImageResource(test.getImg());
         holder.getName().setText(patientsList.get(position).getName());
         holder.getNumberTextView().setText(patientsList.get(position).getPhoneNumber());
         holder.getInfoTextView().setText(patientsList.get(position).getAMKA());
         holder.getImg().setImageResource(patientsList.get(position).getImage());
 
     }
-//    public void onBindViewHolder(@NonNull MyHolder holder, int position) {
-//        holder.getName().setText(arrayList.get(position).getName());
-//        holder.getNumberTextView().setText(arrayList.get(position).getPhoneNumber());
-//        holder.getInfoTextView().setText(arrayList.get(position).getAMKA());
-//        holder.getImg().setImageResource(arrayList.get(position).getImage());
-//    }
+
 
 
     @Override
