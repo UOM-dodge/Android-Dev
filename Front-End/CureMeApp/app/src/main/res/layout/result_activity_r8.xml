@@ -27,7 +27,7 @@
         android:layout_below="@id/recyclerViewContainer"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="15dp"
-        android:background="@drawable/shape_background2"
+        android:background="@drawable/shape_background2_r8"
         android:padding="15dp"
         android:visibility="invisible"
         tools:visibility="visible">
@@ -66,7 +66,7 @@
             android:layout_above="@id/set_button"
             android:layout_below="@id/event_id_properties"
             android:layout_centerInParent="true"
-            android:background="@drawable/shape_background3"
+            android:background="@drawable/shape_background3_r8"
             android:gravity="top|left"
             android:hint="Παρατηρήσεις"
             android:layout_marginBottom="25dp"

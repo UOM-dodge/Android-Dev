@@ -5,7 +5,7 @@
     android:layout_marginTop="10dp"
     android:padding="10dp"
     android:layout_marginHorizontal="5dp"
-    android:background="@drawable/shape_background">
+    android:background="@drawable/shape_background_r8">
 
 
     <ImageView

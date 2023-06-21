@@ -7,14 +7,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class EventViewHolder extends RecyclerView.ViewHolder {
+public class EventViewHolder_R8 extends RecyclerView.ViewHolder {
 
     ImageView imageView;
     TextView nameView, eventIDView, amkaView, dateView, serviceIDView, physioView, typeView, statusView;
 
 
 
-    public EventViewHolder(@NonNull View itemView) {
+    public EventViewHolder_R8(@NonNull View itemView) {
         super(itemView);
         imageView = itemView.findViewById(R.id.imageView);
         nameView = itemView.findViewById(R.id.patient_name);

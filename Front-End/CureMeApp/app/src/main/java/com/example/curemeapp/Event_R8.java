@@ -3,7 +3,7 @@ package com.example.curemeapp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Event {
+public class Event_R8 {
 
     String type;
     String event_id;
@@ -15,7 +15,7 @@ public class Event {
     int image;
     String physio_center;
 
-    public Event(String event_id, String patientFullName, String patientAMKA, LocalDateTime date_time, String serviceID, int image, String physio_center, String type) {
+    public Event_R8(String event_id, String patientFullName, String patientAMKA, LocalDateTime date_time, String serviceID, int image, String physio_center, String type) {
         this.event_id = event_id;
         this.patientFullName = patientFullName;
         this.patientAMKA = patientAMKA;

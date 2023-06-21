@@ -1,11 +1,11 @@
 package com.example.curemeapp;
 
-public class ServiceObject {
+public class ServiceObject_R8 {
 
     String name, id, physioCenter;
 
 
-    public ServiceObject(String name, String id, String physioCenter) {
+    public ServiceObject_R8(String name, String id, String physioCenter) {
         this.name = name;
         this.id = id;
         this.physioCenter = physioCenter;

@@ -12,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class EventAdapter extends RecyclerView.Adapter<EventViewHolder> {
+public class EventAdapter_R8 extends RecyclerView.Adapter<EventViewHolder_R8> {
     Context context;
-    List<Event> events;
+    List<Event_R8> events;
     Bundle bundle;
-    SelectListener listener;
+    SelectListener_R8 listener;
 
 
-    public EventAdapter(Context context, List<Event> events, SelectListener listener) {
+    public EventAdapter_R8(Context context, List<Event_R8> events, SelectListener_R8 listener) {
         this.context = context;
         this.events = events;
         this.listener = listener;
@@ -27,12 +27,12 @@ public class EventAdapter extends RecyclerView.Adapter<EventViewHolder> {
 
     @NonNull
     @Override
-    public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new EventViewHolder(LayoutInflater.from(context).inflate(R.layout.event_view, parent, false));
+    public EventViewHolder_R8 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new EventViewHolder_R8(LayoutInflater.from(context).inflate(R.layout.event_view_r8, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull EventViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull EventViewHolder_R8 holder, @SuppressLint("RecyclerView") int position) {
         holder.nameView.setText(events.get(position).getPatientFullName());
         holder.dateView.setText("Ραντεβού: "+events.get(position).getDateString());
         holder.amkaView.setText("AMKA: " + events.get(position).getPatientAMKA());

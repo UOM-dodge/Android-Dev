@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,9 +19,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
-public class ResultActivity extends AppCompatActivity implements SelectListener{
+public class ResultActivity_R8 extends AppCompatActivity implements SelectListener_R8 {
 
 
     final String doctor_id = "465231879"; //todo recover from bundle
@@ -30,12 +28,12 @@ public class ResultActivity extends AppCompatActivity implements SelectListener{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.result_activity);
+        setContentView(R.layout.result_activity_r8);
 
-        List<Event> events = new ArrayList<>();
+        List<Event_R8> events = new ArrayList<>();
         LocalDateTime dateTime = LocalDateTime.now();
 
-        SearchObject searchObject = new SearchObject();
+        SearchObject_R8 searchObject = new SearchObject_R8();
 
 
         Bundle bundle = getIntent().getExtras();
@@ -56,7 +54,7 @@ public class ResultActivity extends AppCompatActivity implements SelectListener{
 
         RecyclerView recyclerView = findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        recyclerView.setAdapter(new EventAdapter(getApplicationContext(), events, this));
+        recyclerView.setAdapter(new EventAdapter_R8(getApplicationContext(), events, this));
 
 
 
@@ -75,7 +73,7 @@ public class ResultActivity extends AppCompatActivity implements SelectListener{
                 TextView notesView = findViewById(R.id.notes);
                 String notes = notesView.getText().toString();
 
-                SearchObject searchObject = new SearchObject();
+                SearchObject_R8 searchObject = new SearchObject_R8();
 
                 TextView type = findViewById(R.id.edit_type);
                 String typeString = type.getText().toString();
@@ -115,9 +113,9 @@ public class ResultActivity extends AppCompatActivity implements SelectListener{
 
     private void populateSpinner(){
         Spinner spinner = findViewById(R.id.spinner);
-        List<ServiceObject> services = new ArrayList<>();
+        List<ServiceObject_R8> services = new ArrayList<>();
 
-        SearchObject searchObject = new SearchObject();
+        SearchObject_R8 searchObject = new SearchObject_R8();
         services = searchObject.requestServices();
 
         ArrayList<String> serviceNames = new ArrayList<>();

@@ -1,26 +1,24 @@
 package com.example.curemeapp;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchObject {
+public class SearchObject_R8 {
     final String myIP = "192.168.1.100";
-    private List<Event> events = new ArrayList<>();
-    private List<ServiceObject> services = new ArrayList<>();
+    private List<Event_R8> events = new ArrayList<>();
+    private List<ServiceObject_R8> services = new ArrayList<>();
 
 
-    public SearchObject(){
+    public SearchObject_R8(){
 
     }
 
-    public List<Event> searchEvents(String amka_id, String range, String range_end, String doctor_id){
+    public List<Event_R8> searchEvents(String amka_id, String range, String range_end, String doctor_id){
         String url = "http://"+myIP+"/cure_db/searchEvents.php?amka_id="+amka_id+"&range="+range+"&range_end="+range_end+"&doctor_id="+doctor_id;
 
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandler_R8 okHttpHandler = new OkHttpHandler_R8();
             this.events = okHttpHandler.searchEvents(url);
         } catch (Exception e) {
             e.printStackTrace();
@@ -29,12 +27,12 @@ public class SearchObject {
         return events;
     }
 
-    public List<Event> searchEventsWithAmka(String amka_id){
+    public List<Event_R8> searchEventsWithAmka(String amka_id){
         String url = "http://"+myIP+"/cure_db/searchEvents.php?amka_id="+amka_id;
 
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandler_R8 okHttpHandler = new OkHttpHandler_R8();
             this.events = okHttpHandler.searchEvents(url);
         } catch (Exception e) {
             e.printStackTrace();
@@ -43,12 +41,12 @@ public class SearchObject {
         return events;
     }
 
-    public List<Event> searchEventsWithDate(String range, String range_end, String doctor_id){
+    public List<Event_R8> searchEventsWithDate(String range, String range_end, String doctor_id){
         String url = "http://"+myIP+"/cure_db/searchEvents.php?range="+range+"&range_end="+range_end+"&doctor_id="+doctor_id;
 
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandler_R8 okHttpHandler = new OkHttpHandler_R8();
             this.events = okHttpHandler.searchEvents(url);
         } catch (Exception e) {
             e.printStackTrace();
@@ -58,11 +56,11 @@ public class SearchObject {
     }
 
 
-    public List<ServiceObject> requestServices(){
+    public List<ServiceObject_R8> requestServices(){
         String url = "http://"+myIP+"/cure_db/requestServices.php?";
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandler_R8 okHttpHandler = new OkHttpHandler_R8();
             this.services = okHttpHandler.requestServices(url);
         } catch (Exception e) {
             e.printStackTrace();
@@ -87,7 +85,7 @@ public class SearchObject {
         }
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandler_R8 okHttpHandler = new OkHttpHandler_R8();
             response = okHttpHandler.setServices(url);
         } catch (Exception e){
             e.printStackTrace();
@@ -114,7 +112,7 @@ public class SearchObject {
         }
 
         try {
-            OkHttpHandler okHttpHandler = new OkHttpHandler();
+            OkHttpHandler_R8 okHttpHandler = new OkHttpHandler_R8();
             response = okHttpHandler.setServices(url);
         } catch (Exception e){
             e.printStackTrace();

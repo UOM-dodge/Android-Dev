@@ -6,25 +6,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.CalendarView;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.widget.Button;
 import android.widget.TimePicker;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-import java.util.TimeZone;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity_R8 extends AppCompatActivity
 {
     Button timeButton;
     int hour, minute;
@@ -32,7 +25,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_r8);
 //        timeButton = findViewById(R.id.buttonTime);
 //
 //        Spinner spinnerActions = (Spinner) findViewById(R.id.spinner_actions);
@@ -66,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+                Intent intent = new Intent(MainActivity_R8.this, ResultActivity_R8.class);
                 Bundle bundle = new Bundle();
 
                 bundle.putString("amka_id", "000");
