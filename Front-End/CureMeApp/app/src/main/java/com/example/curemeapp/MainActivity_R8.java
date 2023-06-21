@@ -1,9 +1,14 @@
 package com.example.curemeapp;
 
+import static com.example.curemeapp.LogInActivity.IP;
+import static com.example.curemeapp.LogInActivity.SHARED_PREFS;
+import static com.example.curemeapp.LogInActivity.USER_ID;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
@@ -22,23 +27,18 @@ public class MainActivity_R8 extends AppCompatActivity
     Button timeButton;
     int hour, minute;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_r8);
-//        timeButton = findViewById(R.id.buttonTime);
-//
-//        Spinner spinnerActions = (Spinner) findViewById(R.id.spinner_actions);
 
-        // Create an ArrayAdapter using the string array and a default spinner
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.actions,
-//                        android.R.layout.simple_spinner_item);
-//
-//        // Specify the layout to use when the list of choices appears
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // Apply the adapter to the spinner
-//        spinnerActions.setAdapter(adapter);
+        //LOGO ACTION BAR - START
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.logo_200);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //LOGO ACTION BAR - END
 
 
 
@@ -79,38 +79,12 @@ public class MainActivity_R8 extends AppCompatActivity
 
                 System.out.println(dateString);
 
-
                 intent.putExtras(bundle);
-
 
                 startActivity(intent);
             }
         });
 
-
-
-
     }
 
-    public void popTimePicker(View view)
-    {
-        TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener()
-        {
-            @Override
-            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute)
-            {
-                hour = selectedHour;
-                minute = selectedMinute;
-             timeButton.setText(String.format(Locale.getDefault(), "%02d:%02d", hour, minute));
-            }
-        };
-
-        //int style = AlertDialog.THEME_HOLO_DARK;
-
-        TimePickerDialog timePickerDialog = new TimePickerDialog(this, onTimeSetListener, hour, minute, true);
-
-        timePickerDialog.setTitle("Ώρα επίσκεψης");
-        timePickerDialog.show();
-
-    }
 }

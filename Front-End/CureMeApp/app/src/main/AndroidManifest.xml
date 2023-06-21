@@ -49,6 +49,10 @@
 
         <activity android:name=".MainActivityR7"/>
 
+        <activity android:name=".MainActivity_R8"/>
+
+        <activity android:name=".ResultActivity_R8"/>
+
         <activity android:name=".MainActivity_R9"/>
 
 

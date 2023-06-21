@@ -55,8 +55,7 @@ public class DoctorMenuActivity extends AppCompatActivity {
         addSessionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //todo merge class, edit R8
-                Intent intent = new Intent(getApplicationContext(), MainActivityR3.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity_R8.class);
                 startActivity(intent);
             }
         });

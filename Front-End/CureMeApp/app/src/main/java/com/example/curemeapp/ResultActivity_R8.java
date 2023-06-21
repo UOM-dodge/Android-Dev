@@ -1,5 +1,10 @@
 package com.example.curemeapp;
 
+import static com.example.curemeapp.LogInActivity.IP;
+import static com.example.curemeapp.LogInActivity.SHARED_PREFS;
+import static com.example.curemeapp.LogInActivity.USER_ID;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,6 +14,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,18 +28,24 @@ import java.util.List;
 
 public class ResultActivity_R8 extends AppCompatActivity implements SelectListener_R8 {
 
-
-    final String doctor_id = "465231879"; //todo recover from bundle
+    private String myIP, doctor_id;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_activity_r8);
+        loadData();
+
+        //LOGO ACTION BAR - START
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.logo_200);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //LOGO ACTION BAR - END
 
         List<Event_R8> events = new ArrayList<>();
-        LocalDateTime dateTime = LocalDateTime.now();
 
-        SearchObject_R8 searchObject = new SearchObject_R8();
+        SearchObject_R8 searchObject = new SearchObject_R8(myIP);
 
 
         Bundle bundle = getIntent().getExtras();
@@ -73,7 +85,7 @@ public class ResultActivity_R8 extends AppCompatActivity implements SelectListen
                 TextView notesView = findViewById(R.id.notes);
                 String notes = notesView.getText().toString();
 
-                SearchObject_R8 searchObject = new SearchObject_R8();
+                SearchObject_R8 searchObject = new SearchObject_R8(myIP);
 
                 TextView type = findViewById(R.id.edit_type);
                 String typeString = type.getText().toString();
@@ -86,10 +98,12 @@ public class ResultActivity_R8 extends AppCompatActivity implements SelectListen
                     String dateStringNow = dateNow.format(formatter);
                     response = searchObject.setService(eventID[1], serviceID[1], doctor_id, dateStringNow);
                     System.out.println(response);
+                    Toast.makeText(getApplicationContext(), "Ραντεβού εκτελέστηκε!", Toast.LENGTH_SHORT).show();
 
                 } else if (typeString.equals("SESSION")) {
                     response = searchObject.setService(eventID[1], serviceID[1], notes);
                     System.out.println(response);
+                    Toast.makeText(getApplicationContext(), "Επεξεργασία επιτυχής!", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -109,13 +123,19 @@ public class ResultActivity_R8 extends AppCompatActivity implements SelectListen
 
     }
 
+    public void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        myIP = sharedPreferences.getString(IP, "NOT_SET");
+        doctor_id = sharedPreferences.getString(USER_ID, "NOT_SET");
+    }
+
 
 
     private void populateSpinner(){
         Spinner spinner = findViewById(R.id.spinner);
         List<ServiceObject_R8> services = new ArrayList<>();
 
-        SearchObject_R8 searchObject = new SearchObject_R8();
+        SearchObject_R8 searchObject = new SearchObject_R8(myIP);
         services = searchObject.requestServices();
 
         ArrayList<String> serviceNames = new ArrayList<>();
@@ -173,6 +193,14 @@ public class ResultActivity_R8 extends AppCompatActivity implements SelectListen
 
     @Override
     public void onSetButtonClick(String serviceID) {
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        RelativeLayout setProperties = findViewById(R.id.setProperties);
+        setProperties.setVisibility(View.GONE);
 
     }
 }

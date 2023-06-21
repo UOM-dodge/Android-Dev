@@ -6,44 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/basicgreen"
-        android:backgroundTint="@color/white"
-        android:text="CureMe"
-        android:textColor="@color/basicgreen"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="App"
-        android:textColor="@color/logored"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView1"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:text="Εύρεση επίσκεψης"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
@@ -84,7 +59,7 @@
         android:layout_width="344dp"
         android:layout_height="300dp"
         android:layout_marginTop="48dp"
-        android:background="@color/basicgreen"
+        android:background="@drawable/calendar_shape_r10"
         android:backgroundTint="@color/basicgreen"
         android:selectedDateVerticalBar="@color/white"
         android:selectedWeekBackgroundColor="@color/white"
@@ -93,45 +68,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
-    <!--    <Button-->
-<!--        android:id="@+id/buttonTime"-->
-<!--        android:layout_width="165dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        android:width="300dp"-->
-<!--        android:height="300dp"-->
-<!--        android:backgroundTint="@color/darkGray"-->
-<!--        android:onClick="popTimePicker"-->
-<!--        android:text="@string/buttonTime"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/calendarView" />-->
-
-<!--    <Spinner-->
-<!--        android:id="@+id/spinner_actions"-->
-<!--        android:layout_width="159dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        android:spinnerMode="dropdown"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/calendarView" />-->
-
-<!--    <com.google.android.material.textfield.TextInputEditText-->
-<!--        android:id="@+id/textInputEditText"-->
-<!--        android:layout_width="322dp"-->
-<!--        android:layout_height="96dp"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        android:layout_marginBottom="12dp"-->
-<!--        android:background="@color/beige"-->
-<!--        android:backgroundTint="@color/beige"-->
-<!--        android:hint="Επιπλέον σχόλια..."-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/button"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.53"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/buttonTime"-->
-<!--        app:layout_constraintVertical_bias="0.625" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

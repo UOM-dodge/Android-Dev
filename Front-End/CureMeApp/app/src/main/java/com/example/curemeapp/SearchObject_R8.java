@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchObject_R8 {
-    final String myIP = "192.168.1.100";
+    private String myIP;
     private List<Event_R8> events = new ArrayList<>();
     private List<ServiceObject_R8> services = new ArrayList<>();
 
 
-    public SearchObject_R8(){
-
+    public SearchObject_R8(String myIP){
+        this.myIP = myIP;
     }
 
     public List<Event_R8> searchEvents(String amka_id, String range, String range_end, String doctor_id){
