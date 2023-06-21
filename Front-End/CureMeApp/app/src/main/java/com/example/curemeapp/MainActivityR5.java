@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MainActivityR5 extends AppCompatActivity  {
 
-    private final String myIP = "192.168.1.3";
+    private final String myIP = "192.168.1.100";
             //"192.168.1.68";
     List<PatientR5> patientList;
     SearchView searchView;
@@ -29,12 +29,6 @@ public class MainActivityR5 extends AppCompatActivity  {
     ImageView notFoundImageView;
     ArrayList<PatientR5> arrayList = new ArrayList<PatientR5>();
 
-//    String[] contactList = new String[]{"Mary Ting", "George Papas", "Athina Pratsoulaki"};
-//
-//    int[] imgList = new int[]{R.drawable.cont2, R.drawable.images, R.drawable.contact3};
-//
-//    String[]AMKAList = new String[]{"04060912836","09018374217","2507826102938"};
-//    String[]phoneList = new String[]{"6987345672","6978823965","6904350867"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +57,7 @@ public class MainActivityR5 extends AppCompatActivity  {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivityR5.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
 
-        ContactsAdapter contactsAdapter = new ContactsAdapter(arrayList,patientList);
+        ContactsAdapterR5 contactsAdapter = new ContactsAdapterR5(patientList);
         recyclerView.setAdapter(contactsAdapter);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -82,7 +76,7 @@ public class MainActivityR5 extends AppCompatActivity  {
                     }
                 }
 
-                ContactsAdapter contactsAdapter = (ContactsAdapter) recyclerView.getAdapter();
+                ContactsAdapterR5 contactsAdapter = (ContactsAdapterR5) recyclerView.getAdapter();
                 if (contactsAdapter != null) {
                     if (filteredList.isEmpty()) {
                         // Show the "Item not found" message and image
@@ -98,40 +92,6 @@ public class MainActivityR5 extends AppCompatActivity  {
                 return true;
             }
         });
-
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                ArrayList<Patient> filteredList = new ArrayList<>();
-//
-//                for (Patient item : patientList) {
-//                    if (item.getName().toLowerCase().contains(newText.toLowerCase())) {
-//                        filteredList.add(item);
-//                    }
-//                }
-//
-//                ContactsAdapter contactsAdapter = (ContactsAdapter) recyclerView.getAdapter();
-//                if (contactsAdapter != null) {
-//                    if (filteredList.isEmpty()) {
-//                        // Show the "Item not found" message and image
-//                        notFoundLayout.setVisibility(View.VISIBLE);
-//                        recyclerView.setVisibility(View.GONE);
-//                    } else {
-//                        // Hide the "Item not found" message and image
-//                        notFoundLayout.setVisibility(View.GONE);
-//                        recyclerView.setVisibility(View.VISIBLE);
-//                        contactsAdapter.setFilteredList(filteredList);
-//                    }
-//                }
-//                return true;
-//            }
-//        });
-
 
 //        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {@Override
 //        public boolean onQueryTextSubmit(String query) {
