@@ -43,6 +43,8 @@
 
         <activity android:name=".MainActivityR3"/>
 
+        <activity android:name=".R4_MainActivity"/>
+
         <activity android:name=".MainActivityR5"/>
 
         <activity android:name=".MainActivityR6"/>

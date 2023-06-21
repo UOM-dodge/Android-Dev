@@ -1,9 +1,12 @@
 package com.example.curemeapp;
 
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +48,17 @@ public class ContactsAdapterR5 extends RecyclerView.Adapter<ContactsAdapterR5.My
         holder.getNumberTextView().setText(patientsList.get(position).getPhoneNumber());
         holder.getInfoTextView().setText(patientsList.get(position).getAMKA());
         holder.getImg().setImageResource(patientsList.get(position).getImage());
+        holder.infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String patient_amka = holder.infoTextView.getText().toString();
+                Intent intent = new Intent(v.getContext(), R4_MainActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("patient_amka", patient_amka);
+                intent.putExtras(bundle);
+                v.getContext().startActivity(intent);
+            }
+        });
 
     }
 
@@ -62,6 +76,7 @@ public class ContactsAdapterR5 extends RecyclerView.Adapter<ContactsAdapterR5.My
         TextView infoTextView;
         TextView numberTextView;
         TextView appointmentTextView;
+        Button infoButton;
 
 
 
@@ -72,7 +87,7 @@ public class ContactsAdapterR5 extends RecyclerView.Adapter<ContactsAdapterR5.My
             infoTextView = itemView.findViewById(R.id.info);
             numberTextView = itemView.findViewById(R.id.number);
             appointmentTextView = itemView.findViewById(R.id.appointment);
-            itemView.setOnClickListener(this);
+            infoButton = itemView.findViewById(R.id.info_button);
 
         }
 

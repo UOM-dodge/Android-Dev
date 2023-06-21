@@ -75,6 +75,7 @@
     <color name="figma_gray">#8898AF</color>
     <color name="figma_box">#F2F0F0</color>
 
+
     <color name="white">#FFFFFFFF</color>
 
     <color name="basicgreen">#67C1AC</color>
@@ -85,6 +86,7 @@
     <color name="darkGray">#333533</color>
     <color name="gray">#808A8484</color>
     <color name="lightGray">#EEE</color>
+    <color name="ellipse_252_color">#D5D5D5</color>
 
 
 

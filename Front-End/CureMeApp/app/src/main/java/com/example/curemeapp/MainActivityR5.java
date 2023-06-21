@@ -48,7 +48,6 @@ public class MainActivityR5 extends AppCompatActivity  {
 
 
 
-        ImageView imageView = findViewById(R.id.imageView);
         notFoundLayout = findViewById(R.id.notFoundLayout);
         searchView = findViewById(R.id.searchView);
         notFoundTextView = findViewById(R.id.notFoundTextView);
